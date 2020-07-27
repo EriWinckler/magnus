@@ -17,9 +17,9 @@ class About extends Component {
             <h2>About Me</h2>
 
             <p>
-              "I am a self taught developer that started my journey learning
+              I am a self taught developer that started my journey learning
               Python and eventually fell in love with Front End, learning HTML,
-              CSS, JS and React."
+              CSS, JS and React.
             </p>
             <div className="row">
               <div className="columns contact-details">
