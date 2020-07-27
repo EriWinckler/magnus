@@ -2,9 +2,9 @@
 /* a. Webfonts and Icon fonts
  ------------------------------------------------------------------ */
 
- @import url("./fonts.scss");
- @import url("../../fontello/css/fontello.css");
- @import url("../../font-awesome/css/font-awesome.min.css");
+ /* @import url("fonts.scss"); */
+ @import url("../fontello/css/fontello.css");
+ @import url("../font-awesome/css/font-awesome.min.css");
  
  /* ------------------------------------------------------------------
  /* b. Reset
@@ -13,6 +13,11 @@
        HTML5 Doctor Reset - html5doctor.com/html-5-reset-stylesheet/
  /* ------------------------------------------------------------------ */
  
+// COLORS
+$primary-color: #DAA520;
+$secondary-color: #CFB53B;
+$white-color: #FFF;
+
  html, body, div, span, object, iframe,
  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
  abbr, address, cite, code,

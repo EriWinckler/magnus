@@ -1,131 +1,100 @@
 #contact {
-    background: #191919;
-    padding-top: 96px;
-    padding-bottom: 102px;
-    color: #636363;
- }
- #contact .section-head { margin-bottom: 42px; }
+   background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+   -webkit-clip-path: polygon(0 0vh, 100% 0, 100% 100%, 0 100%);
+   clip-path: polygon(0 0vh, 100% 0, 100% 100%, 0 100%);
+   padding: 5rem 0 10rem 0;
+   margin-top: -5rem;
+   margin-bottom: -1px;
+   color: #fff;
+   text-align: center;
  
- #contact a, #contact a:visited  { color: #0762f9; }
- #contact a:hover, #contact a:focus { color: #fff; }
+   .contact-wrapper {
+     margin-top: 3.2rem;
+     padding: 0 2rem;
+     backface-visibility: hidden;
  
- #contact h1 {
-    font: 18px/24px 'opensans-bold', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #EBEEEE;
-    margin-bottom: 6px;
+     .__text {
+       margin-bottom: 2.5rem;
+     }
+     
+     &__text,
+     a {
+       font-size: 2.4rem; 
+     }
+   }
  }
- #contact h1 span { display: none; }
- #contact h1:before {
-    font-family: 'FontAwesome';
-    content: "\f0e0";
-     padding-right: 10px;
-     font-size: 72px;
-    line-height: 72px;
-    text-align: left;
-    float: left;
-    color: #ebeeee;
- }
+
+ .cta-btn {
+   display: inline-block;
+   position: relative;
+   padding: 0.8rem;
+   font-weight: bold;
+   line-height: 1;
+   z-index: 1;
+   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
  
- #contact h4 {
-    font: 16px/24px 'opensans-bold', sans-serif;
-    color: #EBEEEE;
-    margin-bottom: 6px;
- }
- #contact p.lead {
-    font: 18px/36px 'opensans-light', sans-serif;
-    padding-right: 3%;
- }
- #contact .header-col { padding-top: 6px; }
- 
- 
- /* contact form */
- #contact form { margin-bottom: 30px; }
- #contact label {
-    font: 15px/24px 'opensans-bold', sans-serif;
-    margin: 12px 0;
-    color: #EBEEEE;
-     display: inline-block;
-     float: left;
-    width: 26%;
- }
- #contact input,
- #contact textarea,
- #contact select {
-    padding: 10px 20px;
-     color: #eee;
-     background: #373233;
-     margin-bottom: 42px;
-     border: 0;
-     outline: none;
-    font-size: 15px;
-    line-height: 24px;
-    width: 65%;
- }
- #contact input:focus,
- #contact textarea:focus,
- #contact select:focus {
-     color: #fff;
-     background-color: #0762f9;
- }
- #contact button.submit {
-     text-transform: uppercase;
-     letter-spacing: 3px;
-     color:#fff;
-    background: #0D0D0D;
-     border: none;
-    cursor: pointer;
-    height: auto;
-    display: inline-block;
-     border-radius: 0px;
-    margin-left: 26%;
- }
- #contact button.submit:hover {
-     color: #0D0D0D;
-     background: #fff;
- }
- #contact span.required {
-     color: #0762f9;
-     font-size: 13px;
- }
- #message-warning, #message-success {
-    display: none;
-     background: #0F0F0F;
-     padding: 24px 24px;
-     margin-bottom: 36px;
-    width: 65%;
-    margin-left: 26%;
- }
- #message-warning { color: #D72828; }
- #message-success { color: #0762f9; }
- 
- #message-warning i,
- #message-success i {
-    margin-right: 10px;
- }
- #image-loader {
-    display: none;
-    position: relative;
-    left: 18px;
-    top: 17px;
+   &::after {
+     content: '';
+     display: block;
+     position: absolute;
+     width: 0px;
+     height: 100%;
+     left: 0;
+     bottom: 0;
+     z-index: -1;
+     transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+   }
  }
  
+ /* Hero Style */
+ .cta-btn--hero {
+   background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   border-width: 2px;
+   border-style: solid;
+   border-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+   border-image-slice: 1;
+   cursor: pointer;
+   // Responsive Button hero style
+   
+   &::after {
+     background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+     // Responsive Button hero style
+     
+   }
  
- /* Twitter Feed */
- #twitter {
-    margin-top: 12px;
-    padding: 0;
+   &:hover {
+     -webkit-text-fill-color: $white-color;
+     text-decoration: none;
+     // Responsive Button hover hero style
+      
+     &::after {
+       width: 100%;
+     }
+   }
  }
- #twitter li {
-    margin: 6px 0px 12px 0;
-    line-height: 30px;
+ 
+ /* Resume Style */
+ .cta-btn--resume {
+   color: $white-color;
+   border: 2px solid $white-color;
+ 
+   &::after {
+     background: $white-color;
+   }
+ 
+   &:hover {
+     color: $secondary-color;
+     text-decoration: none;
+ 
+     &::after {
+       width: 100%;
+     }
+   }
  }
- #twitter li span {
-    display: block;
- }
- #twitter li b a {
-    font: 13px/36px 'opensans-regular', Sans-serif;
-    color: #474747 !important;
-    border: none;
+ 
+ /* Arrow Button */
+ .up i {
+   color: #272727;
  }

@@ -1,86 +1,35 @@
 import React, { Component } from 'react';
-
-class Contact extends Component {
-  render() {
-
-    return (
-      <section id="contact">
-
-         <div className="row section-head">
-
-            <div className="two columns header-col">
-
-               <h1><span>Get In Touch.</span></h1>
-
-            </div>
-
-            <div className="ten columns">
-
-                  <p className="lead">"I am looking for an opportunity to start my new career path, let's talk?"</p>
-
-            </div>
-
-         </div>
-
-         <div className="row">
-            <div className="eight columns">
-
-               <form action="" method="post" id="contactForm" name="contactForm">
-					<fieldset>
-
-                  <div>
-						   <label htmlFor="contactName">Name <span className="required">*</span></label>
-						   <input type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={this.handleChange}/>
-                  </div>
-
-                  <div>
-						   <label htmlFor="contactEmail">Email <span className="required">*</span></label>
-						   <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={this.handleChange}/>
-                  </div>
-
-                  <div>
-						   <label htmlFor="contactSubject">Subject</label>
-						   <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={this.handleChange}/>
-                  </div>
-
-                  <div>
-                     <label htmlFor="contactMessage">Message <span className="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
-                  </div>
-
-                  <div>
-                     <button className="submit">Submit</button>
-                     <span id="image-loader">
-                        <img alt="" src="images/loader.gif" />
-                     </span>
-                  </div>
-					</fieldset>
-				   </form>
-
-           <div id="message-warning"> Error boy</div>
-				   <div id="message-success">
-                  <i className="fa fa-check"></i>Your message was sent, thank you!<br />
-				   </div>
-           </div>
+import { Container } from 'react-bootstrap';
+import Fade from 'react-reveal/Fade';
 
 
-            <aside className="four columns footer-widgets">
-               <div className="widget widget_contact">
-
-					   <h4>Address</h4>
-					   <p className="address">
-						   Eridan Winckler<br />
-						   East Providence<br />
-						   Rhode Island, USA 02914<br />					   
-					   </p>
-				   </div>
-
-               
-            </aside>
-      </div>
-   </section>
+const Contact = () => {
+  return (
+      <section id="contact"> 
+         <Container>    
+            <Fade bottom duration={1000} delay={800} distance="30px">
+               <div className="contact-wrapper">
+                  <h1 className="contact-wrapper __text" id="contact">
+                  Contact
+                  </h1>
+                  <p className="contact-wrapper __text">
+                  Would you like to work with me? Awesome!
+                  </p>
+                  <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cta-btn cta-btn--resume"
+                  href="mailto:efwinckler@gmail.com"
+                  >
+                  Let's Talk
+                  </a>
+               </div>
+            </Fade>
+         
+         </Container>
+      </section>
     );
   }
-}
+
 
 export default Contact;
