@@ -9,7 +9,7 @@ class About extends Component {
           <div className="three columns">
             <img
               className="profile-pic"
-              src="../images/me.jpg"
+              href="https://imgur.com/xgArHIN"
               alt="Magnus Projects Pic"
             />
           </div>
