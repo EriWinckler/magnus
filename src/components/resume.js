@@ -39,7 +39,7 @@ class Resume extends Component {
                     <p class="info">
                         Law
                         <span>•</span>
-                        <em class="date">2013 - 2018</em>
+                        <em class="date">2008 - 2013</em>
                     </p>
                     <p>
                         Studied law in Brazil, very interesting to see how at the same time that we have a totally different system from the US there's a lot of commonalities.
