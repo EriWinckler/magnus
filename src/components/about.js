@@ -9,7 +9,7 @@ class About extends Component {
           <div className="three columns">
             <img
               className="profile-pic"
-              src="../images/me.jpg"
+              src={require("../images/me.jpg")}
               alt="Magnus Projects Pic"
             />
           </div>
@@ -17,9 +17,7 @@ class About extends Component {
             <h2>About Me</h2>
 
             <p>
-              I am a self taught developer that started my journey learning
-              Python and eventually fell in love with Front End, learning HTML,
-              CSS, JS and React.
+              I am a self taught developer that started my journey learning Python and eventually fell in love with Front End, learning HTML, CSS, JS and React.
             </p>
             <div className="row">
               <div className="columns contact-details">
@@ -41,6 +39,7 @@ class About extends Component {
                   <a
                     href="https://drive.google.com/file/d/16UqqvXR01Rlk2sot2Rsn0toHGkXAJxgv/view?usp=sharing"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="button"
                   >
                     <i className="fa fa-download"></i>Download Resume
