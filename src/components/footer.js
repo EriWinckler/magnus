@@ -10,17 +10,17 @@ class Footer extends Component {
             <div className="twelve columns">
               <ul className="social-links">
                   <li>
-                    <a href="https://www.linkedin.com/in/eridan-winckler-449798169/" target="_blank">
+                    <a href="https://www.linkedin.com/in/eridan-winckler-449798169/"  target="_blank" rel="noopener noreferrer">
                       <i class="fa fa-linkedin"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://github.com/EriWinckler" target="_blank">
+                    <a href="https://github.com/EriWinckler"  target="_blank" rel="noopener noreferrer">
                       <i class="fa fa-github"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/efwinckler/" target="_blank">
+                    <a href="https://www.instagram.com/efwinckler/" target="_blank" rel="noopener noreferrer" >
                       <i class="fa fa-instagram"></i>
                     </a>
                   </li>
