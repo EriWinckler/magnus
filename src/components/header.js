@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import ParticlesBg  from "particles-bg";
 import Fade from 'react-reveal/Fade';
 
+
 class Header extends Component {
   render() {
     
     return (
-      <header id="home">
+      <header id="home">      
       <Fade bottom duration={1000} delay={800} distance="30px">
          <div className="row banner">
-         
             <div className="banner-text">
                <h1 className="responsive-headline">Magnus Projects</h1>
                <hr />
