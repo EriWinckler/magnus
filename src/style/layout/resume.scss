@@ -127,8 +127,8 @@
 .javascript {
   width: 80%;
   background-color: rgb(90, 168, 12);
-  -moz-animation: git 2s ease;
-  -webkit-animation: git 2s ease;
+  -moz-animation: javascript 2s ease;
+  -webkit-animation: javascript 2s ease;
 }
 .css {
   width: 90%;
@@ -197,6 +197,15 @@
   }
 }
 
+@-moz-keyframes javascript {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
 @-webkit-keyframes reactjs {
   0% {
     width: 0px;
@@ -213,7 +222,16 @@
     width: 90%;
   }
 }
-@-webkit-keyframes html {
+@-webkit-keyframes html5 {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@-webkit-keyframes javascript {
   0% {
     width: 0px;
   }
