@@ -59,6 +59,10 @@
 /*	Skill Bars
  /*----------------------------------------------*/
 
+#languages {
+  display: inline;
+}
+
 .bars {
   width: 95%;
   float: left;
@@ -76,6 +80,7 @@
   height: 42px;
   border-radius: 0px;
 }
+
 .bars li em {
   font: 15px "opensans-bold", sans-serif;
   color: #313131;
@@ -208,7 +213,7 @@
     width: 90%;
   }
 }
-@-webkit-keyframes html5 {
+@-webkit-keyframes html {
   0% {
     width: 0px;
   }
