@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import Fade from 'react-reveal/Fade';
 
 class About extends Component {
   render() {
     
     return (
       <section id="about">
+      <Fade bottom duration={1000} delay={800} distance="30px">
         <div className="row">
           <div className="three columns">
             <img
@@ -37,18 +39,19 @@ class About extends Component {
               <div className="columns download">
                 <p>
                   <a
-                    href="https://drive.google.com/file/d/16UqqvXR01Rlk2sot2Rsn0toHGkXAJxgv/view?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="button"
-                  >
-                    <i className="fa fa-download"></i>Download Resume
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cta-btn cta-btn--resume"
+                  href="mailto:efwinckler@gmail.com"
+                  >               
+                    <i className="fa fa-download"></i> Download Resume
                   </a>
                 </p>
               </div>
             </div>
           </div>
         </div>
+        </Fade>
       </section>
     );
   }
