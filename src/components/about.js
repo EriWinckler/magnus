@@ -10,7 +10,7 @@ class About extends Component {
             <img
               className="profile-pic"
               src={require("../images/me.jpg")}
-              alt="Magnus Projects Pic"
+              alt="Eri Pic"
             />
           </div>
           <div className="nine columns main-col">
