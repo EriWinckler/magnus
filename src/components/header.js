@@ -16,7 +16,7 @@ class Header extends Component {
                <h3>I am a web developer and I like to use React and Python to create awesome stuff.</h3>
                
                <ul className="social">
-                  <a href="https://github.com/EriWinckler/magnus" target="_blank" rel="noopener noreferrer" className="button btn project-btn"><i className="fa fa-book"></i>Project</a>
+                  <a href="https://github.com/EriWinckler?tab=repositories" target="_blank" rel="noopener noreferrer" className="button btn project-btn"><i className="fa fa-book"></i>Project</a>
                   <a href="https://www.linkedin.com/in/eridan-winckler-449798169/" target="_blank" rel="noopener noreferrer" className="button btn github-btn"><i className="fa fa-linkedin"></i>LinkedIn</a>
                </ul>
             </div>
