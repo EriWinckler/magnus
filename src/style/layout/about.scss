@@ -12,6 +12,7 @@
     font: 22px/30px 'opensans-bold', sans-serif;
     color: #fff;
     margin-bottom: 12px;
+    margin-top: 50px;
  }
  #about p {
     line-height: 30px;
@@ -21,7 +22,10 @@
     position: relative;
     width: 120px;
     height: 120px;
+    margin: auto;
     border-radius: 100%;
+    display: flex;
+
  }
  #about .contact-details { width: 41.66667%; }
  #about .download {
