@@ -709,11 +709,11 @@ $white-color: #FFF;
        padding: 0;
      }
     .column, .columns {
-        width: auto !important;
-        float: none;
-        margin-left: 0;
-        margin-right: 0;
-       padding: 0 30px;
+      width: auto;
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center;
     }
     .row .row { width: auto; max-width: none; margin: 0 -30px; }
  

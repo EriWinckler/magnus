@@ -7,12 +7,14 @@ import Resume from './components/resume';
 import Contact from './components/contact';
 import Portfolio from './components/portfolio';
 
+
 class App extends Component {
 
   
   render() {
     return (
       <div className="App">
+        
         <Header />
         <About  />
         <Resume /> 
