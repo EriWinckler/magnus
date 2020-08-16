@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 class Resume extends Component {
+  
   getRandomColor() {
     var letters = "0123456789ABCDEF";
     var color = "#";
@@ -62,23 +63,23 @@ class Resume extends Component {
             <div className="bars">
               <ul className="skills">
                 <li>
-                    <span class="bar-expand python"></span>
+                    <span style={{backgroundColor: this.getRandomColor()}} class="bar-expand python"></span>
                     <em>Python</em>
                 </li>
                 <li>
-                    <span class="bar-expand reactjs"></span>
+                    <span style={{backgroundColor: this.getRandomColor()}} class="bar-expand reactjs"></span>
                     <em>ReactJS</em>
                 </li>
                 <li>
-                    <span class="bar-expand javascript"></span>
+                    <span style={{backgroundColor: this.getRandomColor()}} class="bar-expand javascript"></span>
                     <em>Javascript</em>
                 </li>
                 <li>
-                    <span class="bar-expand css"></span>
+                    <span style={{backgroundColor: this.getRandomColor()}} class="bar-expand css"></span>
                     <em>CSS</em>
                 </li>
                 <li>
-                    <span class="bar-expand html"></span>
+                    <span style={{backgroundColor: this.getRandomColor()}} class="bar-expand html"></span>
                     <em>HTML</em>
                 </li>
               </ul>
