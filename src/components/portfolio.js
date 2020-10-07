@@ -33,8 +33,16 @@ class Portfolio extends Component {
                 rel="noopener noreferrer"
                 className="brBoutiqueLink"
               >
-              <p className="brazilBoutique-p">On going project: E-Commerce for a customer selling Gym Attire from Brazil</p>
-                <p className="timeline">Check the Readme on Github for a progress timeline!</p>
+                <p className="brazilBoutique-p">On going project: E-Commerce for a customer selling Gym Attire from Brazil</p>
+                
+              </a>
+              <a
+                href="https://github.com/EriWinckler/BrazilBoutique"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="brBoutiqueLink"
+              >
+              <p className="timeline">Check the Readme on Github for a progress timeline!</p>
               </a>
             
             
