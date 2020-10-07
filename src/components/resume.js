@@ -26,10 +26,10 @@ class Resume extends Component {
               <div className="twelve columns">
                 <div>
                     <h3>Uninter</h3>
-                    <p class="info">
+                    <p className="info">
                         Associate System Analysis and Development
                         <span>•</span>
-                        <em class="date">2020 - 2022</em>
+                        <em className="date">2020 - 2022</em>
                     </p>
                     <p>
                         I am learning to see the broader picture of all the different coding languages and getting the chance to try different ones.
@@ -37,10 +37,10 @@ class Resume extends Component {
                 </div>
                 <div>
                     <h3>PUCPR</h3>
-                    <p class="info">
+                    <p className="info">
                         Law
                         <span>•</span>
-                        <em class="date">2008 - 2013</em>
+                        <em className="date">2008 - 2013</em>
                     </p>
                     <p>
                         Studied law in Brazil, very interesting to see how at the same time that we have a totally different system from the US there's a lot of commonalities.
@@ -63,23 +63,23 @@ class Resume extends Component {
             <div className="bars">
               <ul className="skills">
                 <li>
-                    <span style={{width: "60%", backgroundColor: this.getRandomColor()}} class="bar-expand python"></span>
+                    <span style={{width: "60%", backgroundColor: this.getRandomColor()}} className="bar-expand python"></span>
                     <em>Python</em>
                 </li>
                 <li>
-                    <span style={{width: "60%", backgroundColor: this.getRandomColor()}} class="bar-expand reactjs"></span>
+                    <span style={{width: "70%", backgroundColor: this.getRandomColor()}} className="bar-expand reactjs"></span>
                     <em>ReactJS</em>
                 </li>
                 <li>
-                    <span style={{width: "80%", backgroundColor: this.getRandomColor()}} class="bar-expand javascript"></span>
+                    <span style={{width: "80%", backgroundColor: this.getRandomColor()}} className="bar-expand javascript"></span>
                     <em>Javascript</em>
                 </li>
                 <li>
-                    <span style={{width: "90%", backgroundColor: this.getRandomColor()}} class="bar-expand css"></span>
+                    <span style={{width: "90%", backgroundColor: this.getRandomColor()}} className="bar-expand css"></span>
                     <em>CSS</em>
                 </li>
                 <li>
-                    <span style={{ width: "90%", backgroundColor: this.getRandomColor()}} class="bar-expand html"></span>
+                    <span style={{ width: "90%", backgroundColor: this.getRandomColor()}} className="bar-expand html"></span>
                     <em>HTML</em>
                 </li>
               </ul>
