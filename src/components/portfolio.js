@@ -22,6 +22,7 @@ class Portfolio extends Component {
                   >
                   <img 
                     src={require('../images/brazilBoutique.jpg')} 
+                    alt="store screenshot"
                     className="brazilBoutique"
                   />
                   </a>
@@ -44,6 +45,11 @@ class Portfolio extends Component {
               >
               <p className="timeline">Check the Readme on Github for a progress timeline!</p>
               </a>
+              <a 
+                     href="https://github.com/EriWinckler/BrazilBoutique" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     className="brazilButton"><i className="fa fa-book"></i> Brazil Boutique</a>
             
             
           </div>
