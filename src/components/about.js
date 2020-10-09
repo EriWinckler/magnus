@@ -15,7 +15,7 @@ class About extends Component {
           </div>
 
           <div className="block2">
-            <div className="container">
+            <div className="aboutContainer">
               <div className="info">
                 <h2>About Me</h2>
                 <p>

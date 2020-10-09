@@ -59,3 +59,19 @@
   font-size: 20px;
 }
 
+#about .block2 {
+  width: 95%;
+  float: left;
+  padding: 0;
+  text-align: left;
+  position: relative;
+  right: -50%;
+  max-width: 500px;
+}
+
+#about .aboutContainer {
+  margin-top: 36px;
+  list-style: none;
+  position: relative;
+  left: -50%;
+}

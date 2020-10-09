@@ -33,7 +33,6 @@
 
 #resume p {
   text-align: center;
-  margin: 0 0;
 }
 
 #resume .sectionHeader {
@@ -72,5 +71,18 @@
 }
 
 #resume .formalEducation {
+  width: 95%;
+  float: left;
+  padding: 0;
   text-align: center;
+  position: relative;
+  right: -50%;
+  max-width: 500px;
+}
+
+#resume .educationRow {
+  margin-top: 36px;
+  list-style: none;
+  position: relative;
+  left: -50%;
 }
