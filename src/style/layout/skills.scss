@@ -1,0 +1,214 @@
+#languages .sectionHeader {
+  text-align: center;
+}
+
+#languages h1 {
+    font: 18px/24px "opensans-bold", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#languages h1 span {
+    border-bottom: 3px solid #DAA520;
+    padding-bottom: 6px;
+}
+
+/*----------------------------------------------*/
+/*	Skill Bars
+ /*----------------------------------------------*/
+
+ #languages .skillsBars {
+  width: 95%;
+  float: left;
+  padding: 0;
+  text-align: left;
+}
+#languages .skillsBars .skills {
+  margin-top: 36px;
+  list-style: none;
+}
+#languages .skillsBars li {
+  position: relative;
+  margin-bottom: 60px;
+  background: #333;
+  height: 42px;
+  border-radius: 0px;
+  display: grid;
+}
+
+#languages .skillsBars li em {
+  font: 15px "opensans-bold", sans-serif;
+  color: #313131;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: normal;
+  position: relative;
+  top: -36px;
+}
+.bar-expand {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  
+  background: #313131;
+  display: inline-block;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 0px;
+}
+
+.git {
+  -moz-animation: git 2s ease;
+  -webkit-animation: git 2s ease;
+}
+.illustrator {
+  -moz-animation: illustrator 2s ease;
+  -webkit-animation: illustrator 2s ease;
+}
+.python {
+  background-color: rgb(235, 118, 45);
+  -moz-animation: python 2s ease;
+  -webkit-animation: python 2s ease;
+}
+.reactjs {
+  background-color: rgb(11, 46, 99);
+  -moz-animation: reactjs 2s ease;
+  -webkit-animation: reactjs 2s ease;
+}
+.javascript {
+  background-color: rgb(90, 168, 12);
+  -moz-animation: javascript 2s ease;
+  -webkit-animation: javascript 2s ease;
+}
+.css {
+  background-color: rgb(118, 10, 151);
+  -moz-animation: css 2s ease;
+  -webkit-animation: css 2s ease;
+}
+.html {
+  background-color: rgb(127, 215, 151);
+  -moz-animation: html5 2s ease;
+  -webkit-animation: html5 2s ease;
+}
+.mongodb {
+  -moz-animation: mongodb 2s ease;
+  -webkit-animation: mongodb 2s ease;
+}
+
+@-moz-keyframes git {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@-moz-keyframes illustrator {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 55%;
+  }
+}
+@-moz-keyframes python {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@-moz-keyframes reactjs {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-moz-keyframes css {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-moz-keyframes html5 {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@-moz-keyframes mongodb {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@-moz-keyframes javascript {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@-webkit-keyframes python {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@-webkit-keyframes reactjs {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes css {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-webkit-keyframes html5 {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes javascript {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@-webkit-keyframes mongodb {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 80%;
+  }
+}

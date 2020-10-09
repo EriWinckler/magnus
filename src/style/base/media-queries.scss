@@ -54,8 +54,7 @@
    /* Resume Section
    ------------------------------------------------------------------- */
    #resume h1 { font: 16px/24px 'opensans-bold', sans-serif; }
-   #resume .main-col { padding-right: 5%; }   
-
+   
    /* Testimonials Section
    ------------------------------------------------------------------- */
    #testimonials .header-col h1:before {
@@ -226,25 +225,9 @@
       text-align: center;
    }
    #resume h1 { letter-spacing: 3px; }
-   #resume .main-col { padding-right: 30px; }
    #resume h3, #resume .info { text-align: center; }
       
-   .bars { width: 100%; }
-
-
-   /* Call To Action Section
-   /* ----------------------------------------------------------------- */
-   #call-to-action { text-align: center; }
-   #call-to-action h1 {
-      font: 16px/24px 'opensans-bold', sans-serif;
-      text-align: center;
-      margin-bottom: 30px;
-      text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
-   }
-   #call-to-action h1 span { display: block; }
-   #call-to-action .header-col h1:before { content: none; }
-   #call-to-action p { font-size: 15px; }
-
+   .bars { width: 95%; }
 
    /* Portfolio Section
    /* ----------------------------------------------------------------- */
