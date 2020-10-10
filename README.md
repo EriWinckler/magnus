@@ -8,4 +8,8 @@ Hosted with Netlify at https://eriwinckler.netlify.app
 
 08/26/2020: Worked on the screen size bug.
 
-10/06/2020: Added portifolio and effect for portfolio image.
+10/06/2020: Added portfolio and effect for portfolio image.
+
+10/09/2020: Fixed various bugs on display sizes and style in general. Redone all the style for about, portfolio, resume, skills components.
+
+10/10/2020: Added Google Analytics.
