@@ -46,7 +46,7 @@ class About extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cta-btn cta-btn--resume"
-                  href="mailto:efwinckler@gmail.com"
+                  href="https://drive.google.com/file/d/1k6mYDHALf_nmmPbMAFDttRy3mFN536Ar/view?usp=sharing"
                 >
                   <i className="fa fa-download"></i> Download Resume
                 </a>
