@@ -3,35 +3,42 @@
 }
 
 #languages h1 {
-    font: 18px/24px "opensans-bold", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font: 18px/24px "opensans-bold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 #languages h1 span {
-    border-bottom: 3px solid #DAA520;
-    padding-bottom: 6px;
+  border-bottom: 3px solid #daa520;
+  padding-bottom: 6px;
 }
 
 /*----------------------------------------------*/
 /*	Skill Bars
  /*----------------------------------------------*/
 
- #languages .skillsBars {
+#languages .skillsBars {
+  min-width: 200px;
+  max-width: 600px;
   width: 95%;
-  float: left;
-  padding: 0;
-  text-align: left;
-  position: relative;
-  right: -50%;
-  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  height: 520px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+
 #languages .skills {
-  margin-top: 36px;
-  list-style: none;
-  position: relative;
-  left: -50%;
+  color: white;
+  padding: 1rem;
+  height: 4rem;
 }
+
+#languages nine columns main-col {
+  max-width: 500px;
+  height: 600px;
+}
+
 #languages .skillsBars li {
   position: relative;
   margin-bottom: 60px;
@@ -55,7 +62,7 @@
   left: 0;
   top: 0;
   margin: 0;
-  
+
   background: #313131;
   display: inline-block;
   height: 42px;

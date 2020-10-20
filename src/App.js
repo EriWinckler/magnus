@@ -13,15 +13,17 @@ import Contact from "./components/contact";
 import Portfolio from "./components/portfolio";
 import Skills from "./components/skills";
 
-const App = () => {
+import Navigation from "./components/navigation";
 
+const App = () => {
   useEffect(() => {
-    ReactGA.initialize('UA-180197702-1');
+    ReactGA.initialize("UA-180197702-1");
     ReactGA.pageview(window.location.pathname);
-  })
+  });
 
   return (
     <div className="App">
+      <Navigation />
       <Header />
       <About />
       <Resume />
