@@ -9,7 +9,7 @@ const Portfolio = () => {
         <Tilt className="Tilt" options={{ max: 25 }} style={{ width: 300 }}>
           <div className="Tilt-inner">
             <a
-              href="https://brazilboutique.netlify.app/"
+              href="https://brazilboutique-ba097.firebaseapp.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="brBoutiqueLink"
@@ -23,33 +23,27 @@ const Portfolio = () => {
           </div>
         </Tilt>
         <a
-          href="https://brazilboutique.netlify.app/"
+          href="https://brazilboutique-ba097.firebaseapp.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="brBoutiqueLink"
-        >
-          <p className="brazilBoutique-p">
-            On going project: E-Commerce for a customer selling Gym Attire from
-            Brazil
-          </p>
-        </a>
-        <a
-          href="https://github.com/EriWinckler/BrazilBoutique"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="brBoutiqueLink"
-        >
-          <p className="timeline">
-            Check the Readme on Github for a progress timeline!
-          </p>
-        </a>
+        />
+        <p className="brazilBoutique-p">
+          E-Commerce page for a customer from Brazil
+        </p>
+
+        <p className="timeline">
+          Page using bootstrap, React Router, React Currency Format. <br />
+          Hosted with Firebase that also works as user authenticator.
+        </p>
+
         <a
           href="https://github.com/EriWinckler/BrazilBoutique"
           target="_blank"
           rel="noopener noreferrer"
           className="brazilButton"
         >
-          <i className="fa fa-book"></i> Brazil Boutique
+          <i className="fa fa-github"></i> Brazil Boutique
         </a>
       </div>
     </section>
