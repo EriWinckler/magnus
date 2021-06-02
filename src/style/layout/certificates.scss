@@ -1,0 +1,28 @@
+.certificates {
+  max-width: 600px;
+  min-width: 200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding-bottom: 30px;
+  text-align: center;
+  justify-content: center;
+}
+
+.certificate {
+  padding: 1rem;
+}
+
+#certificates .certificate h6 {
+  font-size: 15px;
+}
+
+#certificates .certificate p {
+  margin: 0;
+  font-size: 12px;
+}
+
+#certificates .certificate .date {
+  font-size: 10px;
+}

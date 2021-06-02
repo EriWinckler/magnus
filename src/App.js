@@ -12,7 +12,7 @@ import Resume from "./components/resume";
 import Contact from "./components/contact";
 import Portfolio from "./components/portfolio";
 import Skills from "./components/skills";
-
+import Certificates from "./components/certificates";
 import Navigation from "./components/navigation";
 
 const App = () => {
@@ -27,6 +27,7 @@ const App = () => {
       <Header />
       <About />
       <Resume />
+      <Certificates />
       <Skills />
       <Portfolio />
       <Contact />

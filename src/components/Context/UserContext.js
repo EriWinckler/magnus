@@ -5,7 +5,7 @@ export const UserContext = createContext();
 export const UserProvider = (props) => {
   const [user, setUser] = useState([
     {
-      main: "Magnus Projects",
+      main: "Eri Winckler",
       subMain:
         "I am a web developer and I like to use React and Python to create awesome stuff.",
       about:

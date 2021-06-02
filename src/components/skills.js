@@ -27,6 +27,16 @@ const Skills = () => {
                 width: "60%",
                 backgroundColor: getRandomColor(),
               }}
+              className="bar-expand html"
+            ></span>
+            <em>JAVA</em>
+          </li>
+          <li>
+            <span
+              style={{
+                width: "60%",
+                backgroundColor: getRandomColor(),
+              }}
               className="bar-expand python"
             ></span>
             <em>Python</em>

@@ -10,3 +10,20 @@
 @import "./layout/resume.scss";
 @import "./layout/skills.scss";
 @import "./layout/navigation.scss";
+@import "./layout/certificates.scss";
+
+h1 span {
+  border-bottom: 3px solid #daa520;
+  padding-bottom: 6px;
+}
+
+h1 {
+  font: 18px/24px "opensans-bold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 30px;
+}

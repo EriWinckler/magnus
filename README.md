@@ -18,3 +18,5 @@ Solved the problem with some screen sizes but still not 100%.
 Fixed a bug from the skill bars on smaller screens. <br />
 Refactored all the components to the new Hooks syntax. <br />
 Added Navbar component.
+
+06/01/2020 - Added Certificates component.
