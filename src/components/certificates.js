@@ -81,10 +81,20 @@ function Certificates() {
           <p>365 DataScience</p>
           <p className="date">Completed in Apr/13/20</p>
         </div>
+      </div>
+      <h1 className="sectionHeader">
+        <span>On-line Classes Completed</span>
+      </h1>
+      <div className="certificates">
         <div className="certificate">
           <h6>Python for Everybody</h6>
           <p>University of Michigan</p>
           <p className="date">Completed in May/20/20</p>
+        </div>
+        <div className="certificate">
+          <h6>Learn React.js</h6>
+          <p>Codecademy</p>
+          <p className="date">Completed in Jun/20</p>
         </div>
         <div className="certificate">
           <h6>Python Core Language</h6>
@@ -95,6 +105,11 @@ function Certificates() {
             Tested Expert in Python with a score of 202 out of 300 <br />
             Verified in Apr/5/20
           </p>
+        </div>
+        <div className="certificate">
+          <h6>CS50</h6>
+          <p>Harvard University</p>
+          <p className="date">Completed in Apr/20</p>
         </div>
       </div>
     </div>
