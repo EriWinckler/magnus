@@ -15,8 +15,8 @@
 }
 
 #portfolio a {
-  color: #FFF;
-  text-decoration: none;  
+  color: #fff;
+  text-decoration: none;
 }
 
 #portfolio a :hover {
@@ -38,13 +38,13 @@
 }
 
 .brBoutiqueLink {
-   text-decoration: none !important;
-   color: #95a3a3 !important;
+  text-decoration: none !important;
+  color: #95a3a3 !important;
 }
 
 .brBoutiqueLink :hover {
-   text-decoration: none !important;
-   color: #95a3a3 !important;
+  text-decoration: none !important;
+  color: #95a3a3 !important;
 }
 
 .Tilt {
@@ -64,7 +64,19 @@
 }
 
 .brazilButton {
-  background-color: #95a3a3; /* Green */
+  background-color: #95a3a3;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.CRUDButton {
+  background-color: #95a3a3;
   border: none;
   color: white;
   padding: 5px 20px;
