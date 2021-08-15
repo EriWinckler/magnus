@@ -34,7 +34,7 @@ const Portfolio = () => {
           </p>
 
           <p className="timeline">
-            Page using bootstrap, React Router, React Currency Format. <br />
+            Page using React Context, Bootstrap, React Router, React Currency Format. <br />
             Hosted with Firebase that also works as user authenticator.
           </p>
 
