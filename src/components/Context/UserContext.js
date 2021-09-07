@@ -7,9 +7,9 @@ export const UserProvider = (props) => {
     {
       main: "Eri Winckler",
       subMain:
-        "I am a web developer and I like to use React and Python to create awesome stuff.",
+        "I am a web developer and I like to use React, Python and specially Java to create awesome stuff.",
       about:
-        "I am a self taught developer that started my journey learning Python and eventually fell in love with Front End, learning HTML, CSS, JS and React.",
+        "I am a self taught developer that started my journey learning Python and eventually fell in love with Front End, learning HTML, CSS, JS and React. Lately I've picked up Java and I am loving the language.",
       address: "East Providence",
       state: "Rhode Island, USA, 02914",
       email: "efwinckler@gmail.com",
