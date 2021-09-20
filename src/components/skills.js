@@ -24,7 +24,7 @@ const Skills = () => {
           <li>
             <span
               style={{
-                width: "60%",
+                width: "75%",
                 backgroundColor: getRandomColor(),
               }}
               className="bar-expand html"
