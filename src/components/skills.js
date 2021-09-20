@@ -24,10 +24,10 @@ const Skills = () => {
           <li>
             <span
               style={{
-                width: "75%",
+                width: "70%",
                 backgroundColor: getRandomColor(),
               }}
-              className="bar-expand html"
+              className="bar-expand java"
             ></span>
             <em>JAVA</em>
           </li>
@@ -44,7 +44,7 @@ const Skills = () => {
           <li>
             <span
               style={{
-                width: "70%",
+                width: "80%",
                 backgroundColor: getRandomColor(),
               }}
               className="bar-expand reactjs"
