@@ -27,7 +27,7 @@ const Skills = () => {
                 width: "70%",
                 backgroundColor: getRandomColor(),
               }}
-              className="bar-expand java"
+              className="bar-expand html"
             ></span>
             <em>JAVA</em>
           </li>
