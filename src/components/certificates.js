@@ -73,13 +73,13 @@ function Certificates() {
               rel="noopener noreferrer"
               className="certificateLink"
               target="_blank"
-              href="https://drive.google.com/file/d/1IDSJ0eCwGhp8B1FWJb7GqTtI-Lr4v418/view?usp=sharing"
+              href="https://i.imgur.com/tr1AS7c.png"
             >
-              Git and Github
+              Certified 80+ Words per Minute
             </a>
           </h6>
-          <p>365 DataScience</p>
-          <p className="date">Completed in Apr/13/20</p>
+          <p>Monkeytype</p>
+          <p className="date">Completed in Oct/01/2021</p>
         </div>
       </div>
       <h1 className="sectionHeader">
