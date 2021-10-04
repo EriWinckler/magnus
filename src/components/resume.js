@@ -19,14 +19,16 @@ const Resume = () => {
             <em className="date">{info.yearSpan}</em>
           </p>
           <p>{info.schoolDescription}</p>
-          <br />
-          <h3>{info.olderSchool}</h3>
-          <p className="info">
-            {info.olderCourse}
-            <span>•</span>
-            <em className="date">{info.olderYearSpan}</em>
-          </p>
-          <p>{info.olderSchoolDescription}</p>
+          {
+            // <br />
+            // <h3>{info.olderSchool}</h3>
+            // <p className="info">
+            //   {info.olderCourse}
+            //   <span>•</span>
+            //   <em className="date">{info.olderYearSpan}</em>
+            // </p>
+            // <p>{info.olderSchoolDescription}</p>
+          }
         </div>
       </div>
     </section>
