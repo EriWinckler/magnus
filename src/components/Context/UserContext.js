@@ -13,16 +13,16 @@ export const UserProvider = (props) => {
       address: "East Providence",
       state: "Rhode Island, USA, 02914",
       email: "efwinckler@gmail.com",
-      school: "Uninter",
-      course: "Associate System Analysis and Development",
-      yearSpan: "2020 - 2022",
+      school: "CareerDevs",
+      course: "FullStack Developer",
+      yearSpan: "2021-2022",
       schoolDescription:
-        "I am learning to see the broader picture of all the different coding languages and getting the chance to try different ones.",
-      olderSchool: "PUCPR",
-      olderCourse: "Law",
-      olderYearSpan: "2008 - 2013",
+        "Learning the best techniques and tricks for real job environment in Java",
+      olderSchool: "Uninter",
+      olderCourse: "Associate System Analysis and Development",
+      olderYearSpan: "2020 - 2022",
       olderSchoolDescription:
-        "Studied law in Brazil, very interesting to see how at the same time that we have a totally different system from the US there's a lot of commonalities.",
+        "I am learning to see the broader picture of all the different coding languages and getting the chance to try different ones.",
     },
   ]);
   return (
