@@ -45,7 +45,7 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-btn cta-btn--resume"
-                href="https://drive.google.com/file/d/1k6mYDHALf_nmmPbMAFDttRy3mFN536Ar/view?usp=sharing"
+                href="https://drive.google.com/file/d/17amHe66Le2hJDkJkpyAg0rNfcFysYGna/view?usp=sharing"
               >
                 <i className="fa fa-download"></i> Download Resume
               </a>
