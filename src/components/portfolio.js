@@ -30,11 +30,12 @@ const Portfolio = () => {
             className="brBoutiqueLink"
           />
           <p className="brazilBoutique-p">
-            E-Commerce page for a customer from Brazil
+            E-Commerce page with brazilian thematic
           </p>
 
           <p className="timeline">
-            Page using React Context, Bootstrap, React Router, React Currency Format. <br />
+            Page using React Context, Bootstrap, React Router, React Currency
+            Format. <br />
             Hosted with Firebase that also works as user authenticator.
           </p>
 
