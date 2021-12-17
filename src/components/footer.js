@@ -36,7 +36,7 @@ const Footer = () => {
           </ul>
 
           <ul className="copyright">
-            <li>&copy; Copyright {new Date().getFullYear()} Magnus Projects</li>
+            <li>&copy; Copyright {new Date().getFullYear()} Eri Winckler</li>
           </ul>
         </div>
         <div id="go-top">
