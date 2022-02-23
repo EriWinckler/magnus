@@ -24,22 +24,22 @@ const Skills = () => {
           <li>
             <span
               style={{
-                width: "70%",
-                backgroundColor: getRandomColor(),
-              }}
-              className="bar-expand html"
-            ></span>
-            <em>JAVA</em>
-          </li>
-          <li>
-            <span
-              style={{
                 width: "60%",
                 backgroundColor: getRandomColor(),
               }}
               className="bar-expand python"
             ></span>
             <em>Python</em>
+          </li>
+          <li>
+            <span
+              style={{
+                width: "80%",
+                backgroundColor: getRandomColor(),
+              }}
+              className="bar-expand html"
+            ></span>
+            <em>JAVA</em>
           </li>
           <li>
             <span
@@ -54,7 +54,7 @@ const Skills = () => {
           <li>
             <span
               style={{
-                width: "80%",
+                width: "85%",
                 backgroundColor: getRandomColor(),
               }}
               className="bar-expand javascript"
