@@ -16,10 +16,10 @@ import Certificates from "./components/certificates";
 import Navigation from "./components/navigation";
 
 const App = () => {
-  useEffect(() => {
-    ReactGA.initialize("UA-180197702-1");
-    ReactGA.pageview(window.location.pathname);
-  });
+  // useEffect(() => {
+  //   ReactGA.initialize("UA-180197702-1");
+  //   ReactGA.pageview(window.location.pathname);
+  // });
 
   return (
     <div className="App">
