@@ -32,7 +32,7 @@ const Portfolio = () => {
                   </div>
                 </Tilt>
                 <a
-                  href="https://pcbw.netlify.app/"
+                  href="http://astrologicalartofevolving.netlify.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="brBoutiqueLink"
@@ -48,7 +48,7 @@ const Portfolio = () => {
                 </p>
 
                 <a
-                  href="https://pcbw.netlify.app/"
+                  href="http://astrologicalartofevolving.netlify.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="PCBW-button"

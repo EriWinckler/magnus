@@ -39,7 +39,7 @@ const Skills = () => {
               }}
               className="bar-expand html"
             ></span>
-            <em>JAVA</em>
+            <em>ReactJS</em>
           </li>
           <li>
             <span
@@ -49,7 +49,7 @@ const Skills = () => {
               }}
               className="bar-expand reactjs"
             ></span>
-            <em>ReactJS</em>
+            <em>Javascript</em>
           </li>
           <li>
             <span
@@ -59,7 +59,7 @@ const Skills = () => {
               }}
               className="bar-expand javascript"
             ></span>
-            <em>Javascript</em>
+            <em>Java</em>
           </li>
           <li>
             <span

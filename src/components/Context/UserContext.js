@@ -7,22 +7,22 @@ export const UserProvider = (props) => {
     {
       main: "Eri Winckler",
       subMain:
-        "I am a web developer and I like to use React, Java and Python to create awesome stuff.",
+        "I am a software developer that uses React, Java and Python to create awesome stuff.",
       about:
-        "I am a self taught developer that started my journey learning Python and eventually fell in love with Front End, learning HTML, CSS, JS and React. Lately I've picked up Java and I am loving the language.",
-      address: "East Providence",
-      state: "Rhode Island, USA, 02914",
+        "I am a mostly self taught developer that started my journey learning Python and eventually fell in love with with React and Java as a perfect pair.",
+      address: "",
+      state: "United States",
       email: "efwinckler@gmail.com",
-      school: "CareerDevs",
-      course: "FullStack Developer",
-      yearSpan: "2021-2022",
+      school: "Uninter",
+      course: "Software Developer",
+      yearSpan: "2019-2022",
       schoolDescription:
-        "Learning the best techniques and tricks for real job environment in Java",
-      olderSchool: "Uninter",
-      olderCourse: "Associate System Analysis and Development",
-      olderYearSpan: "2020 - 2022",
+        "Software Development course learning all the most important principles of the industry and the Software Development Life Cycle.",
+      olderSchool: "CareerDevs",
+      olderCourse: "FullStack Developer",
+      olderYearSpan: "2021 - 2021",
       olderSchoolDescription:
-        "I am learning to see the broader picture of all the different coding languages and getting the chance to try different ones.",
+        "Learning the best techniques and tricks focused on a real job environment in Java.",
     },
   ]);
   return (
