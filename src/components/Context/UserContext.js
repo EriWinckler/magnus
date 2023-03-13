@@ -9,8 +9,8 @@ export const UserProvider = (props) => {
       subMain:
         "I am a software developer that uses React, Java and Python to create awesome stuff.",
       about:
-        "I am a mostly self taught developer that started my journey learning Python and eventually fell in love with with React and Java as a perfect pair.",
-      address: "",
+        "I started my journey as a developer learning Python and eventually fell in love with with React and Java as a perfect pair.",
+      address: "Remote",
       state: "United States",
       email: "efwinckler@gmail.com",
       school: "Uninter",
