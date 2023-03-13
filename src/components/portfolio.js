@@ -18,7 +18,7 @@ const Portfolio = () => {
                 >
                   <div className="Tilt-inner">
                     <a
-                      href="https://pcbw.netlify.app/"
+                      href="https://astrologicalartofevolving.netlify.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="PCBW page link"
