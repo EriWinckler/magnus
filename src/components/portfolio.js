@@ -18,13 +18,13 @@ const Portfolio = () => {
                 >
                   <div className="Tilt-inner">
                     <a
-                      href="https://astrologicalartofevolving.netlify.app/"
+                      href="https://astrologicalartofevolving.net/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="PCBW page link"
                     >
                       <img
-                        src="https://i.imgur.com/6fdCaPu.png"
+                        src="https://imgur.com/Y3LNkj4.png"
                         alt="PCBW page screenshot"
                         className="brazilBoutique"
                       />
@@ -32,14 +32,11 @@ const Portfolio = () => {
                   </div>
                 </Tilt>
                 <a
-                  href="http://astrologicalartofevolving.netlify.com/"
+                  href="https://astrologicalartofevolving.net/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="brBoutiqueLink"
                 />
-                <p className="brazilBoutique-p">
-                  Astrological Art of Evolving Page
-                </p>
+                <p className="linkP">Astrological Art of Evolving Page</p>
 
                 <p className="timeline">
                   Full Stack live production webpage in development for PCBW
