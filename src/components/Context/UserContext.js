@@ -22,7 +22,7 @@ export const UserProvider = (props) => {
       olderCourse: "FullStack Developer",
       olderYearSpan: "2021 - 2021",
       olderSchoolDescription:
-        "Learning the best techniques and tricks focused on a real job environment in Java.",
+        "Learning the best techniques and tricks focused on a real job environment in Java and React.",
     },
   ]);
   return (

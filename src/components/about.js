@@ -31,9 +31,7 @@ const About = () => {
                 <span>Eridan Winckler</span>
                 <br />
                 <span>
-                  {/* {info.address} */}
-
-                  {info.state}
+                  {info.address}, {info.state}
                 </span>
                 <br />
                 <span>{info.email}</span>
@@ -45,6 +43,7 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-btn cta-btn--resume"
+                style={{ color: "#000" }}
                 href="https://drive.google.com/file/d/10JSZAhv7aurOe06mMVd04BBG5lticRhJ/view?usp=sharing"
               >
                 <i className="fa fa-download"></i> Download Resume
