@@ -45,7 +45,7 @@ const Portfolio = () => {
                 </p>
 
                 <a
-                  href="http://astrologicalartofevolving.netlify.com/"
+                  href="https://astrologicalartofevolving.net/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="PCBW-button"
