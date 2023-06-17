@@ -44,7 +44,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 className="cta-btn cta-btn--resume"
                 style={{ color: "#000" }}
-                href="https://drive.google.com/file/d/10JSZAhv7aurOe06mMVd04BBG5lticRhJ/view?usp=sharing"
+                href="https://drive.google.com/file/d/1JEhnThRavQhAmPw1MGybFkad9MYXarP7/view?usp=sharing"
               >
                 <i className="fa fa-download"></i> Download Resume
               </a>
