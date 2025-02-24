@@ -1,6 +1,5 @@
 import React from "react";
-import Tilt from "react-tilt";
-import { Container, Row, Col } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 const Portfolio = () => {
   return (
@@ -11,26 +10,21 @@ const Portfolio = () => {
           <Container>
             <Row>
               <Col>
-                <Tilt
-                  className="Tilt"
-                  options={{ max: 25 }}
-                  style={{ width: 300 }}
-                >
-                  <div className="Tilt-inner">
-                    <a
-                      href="https://astrologicalartofevolving.net/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="PCBW page link"
-                    >
-                      <img
-                        src="https://imgur.com/Y3LNkj4.png"
-                        alt="PCBW page screenshot"
-                        className="brazilBoutique"
-                      />
-                    </a>
-                  </div>
-                </Tilt>
+                <div className="Tilt-inner">
+                  <a
+                    href="https://astrologicalartofevolving.net/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="PCBW page link"
+                  >
+                    <img
+                      src="https://imgur.com/Y3LNkj4.png"
+                      alt="PCBW page screenshot"
+                      className="brazilBoutique"
+                    />
+                  </a>
+                </div>
+
                 <a
                   href="https://astrologicalartofevolving.net/"
                   target="_blank"
@@ -54,26 +48,21 @@ const Portfolio = () => {
                 </a>
               </Col>
               <Col>
-                <Tilt
-                  className="Tilt"
-                  options={{ max: 25 }}
-                  style={{ width: 300 }}
-                >
-                  <div className="Tilt-inner">
-                    <a
-                      href="https://brazilboutique-ba097.firebaseapp.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="brBoutiqueLink"
-                    >
-                      <img
-                        src={require("../images/brazilBoutique.jpg")}
-                        alt="store screenshot"
-                        className="brazilBoutique"
-                      />
-                    </a>
-                  </div>
-                </Tilt>
+                <div className="Tilt-inner">
+                  <a
+                    href="https://brazilboutique-ba097.firebaseapp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="brBoutiqueLink"
+                  >
+                    <img
+                      src={require("../images/brazilBoutique.jpg")}
+                      alt="store screenshot"
+                      className="brazilBoutique"
+                    />
+                  </a>
+                </div>
+
                 <a
                   href="https://brazilboutique-ba097.firebaseapp.com/"
                   target="_blank"
@@ -100,26 +89,21 @@ const Portfolio = () => {
                 </a>
               </Col>
               <Col>
-                <Tilt
-                  className="Tilt"
-                  options={{ max: 25 }}
-                  style={{ width: 300 }}
-                >
-                  <div className="Tilt-inner">
-                    <a
-                      href="https://eriscrudapp.netlify.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="brBoutiqueLink"
-                    >
-                      <img
-                        src={require("../images/CRUDpage.png")}
-                        alt="CRUD page screenshot"
-                        className="brazilBoutique"
-                      />
-                    </a>
-                  </div>
-                </Tilt>
+                <div className="Tilt-inner">
+                  <a
+                    href="https://eriscrudapp.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="brBoutiqueLink"
+                  >
+                    <img
+                      src={require("../images/CRUDpage.png")}
+                      alt="CRUD page screenshot"
+                      className="brazilBoutique"
+                    />
+                  </a>
+                </div>
+
                 <a
                   href="https://eriscrudapp.netlify.app/"
                   target="_blank"
