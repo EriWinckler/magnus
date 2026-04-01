@@ -1,0 +1,51 @@
+{
+  "name": "magnus-modernization",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Vite Dev Server",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "remoteEnv": {
+    "OPENROUTER_API_KEY": "${localEnv:OPENROUTER_API_KEY}",
+    "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
+    "ANTHROPIC_AUTH_TOKEN": "${localEnv:OPENROUTER_API_KEY}",
+    "ANTHROPIC_API_KEY": "",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "qwen/qwen3-coder:free",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "qwen/qwen3-coder:free",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "nvidia/nemotron-3-super-120b-a12b:free",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "qwen/qwen3-coder:free"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "ms-vscode.vscode-typescript-next",
+        "vitest.explorer",
+        "github.vscode-github-actions",
+        "eamodio.gitlens",
+        "christian-kohler.path-intellisense"
+      ],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "tailwindCSS.experimental.classRegex": [
+          ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+        ]
+      }
+    }
+  },
+  "remoteUser": "node",
+  "postCreateCommand": "claude --version && echo '✅ Claude Code ready' && npm install"
+}
