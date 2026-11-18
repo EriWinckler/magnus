@@ -1,5 +1,5 @@
-import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import logo from "../images/icon-48x48.png";
 
 const navigation = () => {
   return (
@@ -13,7 +13,7 @@ const navigation = () => {
     >
       <Container>
         <Navbar.Brand href="#home" className="navbarBrand">
-          <img src={require("../images/icon-48x48.png")} alt="logo" />
+          <img src={logo} alt="logo" />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -26,7 +26,6 @@ const navigation = () => {
             <Nav.Link href="#resume">Education</Nav.Link>
             <Nav.Link href="#certificates">Certificates</Nav.Link>
             <Nav.Link href="#languages">Skills</Nav.Link>
-            {/* <Nav.Link href="#portfolio">Portfolio</Nav.Link> */}
             <Nav.Link href="#contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -1,16 +1,13 @@
-import React, { useContext } from "react";
-import { UserContext } from "./Context/UserContext";
+import me from "../images/me.jpg";
+import { CONTENT } from "../content";
 
 const About = () => {
-  const [user, setUser] = useContext(UserContext);
-  const info = user[0];
-
   return (
     <section id="about">
       <div className="container">
         <img
           className="profile-pic"
-          src={require("../images/me.jpg")}
+          src={me}
           alt="Eridan Winckler"
         />
       </div>
@@ -19,7 +16,7 @@ const About = () => {
         <div className="aboutContainer">
           <div className="info">
             <h2>About Me</h2>
-            <p>{info.about}</p>
+            <p>{CONTENT.summary}</p>
           </div>
           <div></div>
 
@@ -29,10 +26,10 @@ const About = () => {
               <span>Eridan Winckler</span>
               <br />
               <span>
-                {info.address}, {info.state}
+                {CONTENT.address}, {CONTENT.state}
               </span>
               <br />
-              <span>{info.email}</span>
+              <span>{CONTENT.email}</span>
             </p>
           </div>
 

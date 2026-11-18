@@ -1,15 +1,5 @@
-import React from "react";
 
 const Skills = () => {
-  const getRandomColor = () => {
-    var letters = "0123456789ABCDEF";
-    var color = "#";
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  };
-
   return (
     <section id="languages">
       <div className="sectionHeader">
@@ -25,7 +15,7 @@ const Skills = () => {
             <span
               style={{
                 width: "95%",
-                backgroundColor: getRandomColor(),
+                backgroundColor: "#0B1F3A",
               }}
               className="bar-expand css"
             ></span>
@@ -35,7 +25,7 @@ const Skills = () => {
             <span
               style={{
                 width: "90%",
-                backgroundColor: getRandomColor(),
+                backgroundColor: "#0B1F3A",
               }}
               className="bar-expand css"
             ></span>
@@ -45,7 +35,7 @@ const Skills = () => {
             <span
               style={{
                 width: "80%",
-                backgroundColor: getRandomColor(),
+                backgroundColor: "#0B1F3A",
               }}
               className="bar-expand javascript"
             ></span>
@@ -55,7 +45,7 @@ const Skills = () => {
             <span
               style={{
                 width: "80%",
-                backgroundColor: getRandomColor(),
+                backgroundColor: "#0B1F3A",
               }}
               className="bar-expand javascript"
             ></span>
@@ -65,7 +55,7 @@ const Skills = () => {
             <span
               style={{
                 width: "80%",
-                backgroundColor: getRandomColor(),
+                backgroundColor: "#0B1F3A",
               }}
               className="bar-expand javascript"
             ></span>
@@ -75,7 +65,7 @@ const Skills = () => {
             <span
               style={{
                 width: "70%",
-                backgroundColor: getRandomColor(),
+                backgroundColor: "#0B1F3A",
               }}
               className="bar-expand reactjs"
             ></span>

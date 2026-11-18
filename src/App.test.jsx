@@ -1,10 +1,10 @@
-import React, { act } from "react";
+import { act } from "react";
+import { expect, test, vi } from "vitest";
 import { createRoot } from "react-dom/client";
 import App from "./App";
-import { UserProvider } from "./components/Context/UserContext";
 
 // jsdom has no canvas, which particles-bg needs.
-jest.mock("particles-bg", () => () => null);
+vi.mock("particles-bg", () => ({ default: () => null }));
 
 globalThis.IS_REACT_ACT_ENVIRONMENT = true;
 
@@ -15,9 +15,7 @@ test("renders the site content that matches the current resume", () => {
 
   act(() => {
     root.render(
-      <UserProvider>
-        <App />
-      </UserProvider>
+      <App />
     );
   });
 

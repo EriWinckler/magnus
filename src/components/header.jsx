@@ -1,18 +1,14 @@
 import ParticlesBg from "particles-bg";
-import React, { useContext } from "react";
-import { UserContext } from "./Context/UserContext";
+import { CONTENT } from "../content";
 
 const Header = () => {
-  const [user, setUser] = useContext(UserContext);
-  const info = user[0];
-
   return (
     <header id="home">
       <div className="row banner">
         <div className="banner-text">
-          <h1 className="responsive-headline">{info.main}</h1>
+          <h1 className="responsive-headline">{CONTENT.name}</h1>
           <hr />
-          <h3>{info.subMain}</h3>
+          <h3>{CONTENT.headline}</h3>
 
           <ul className="social">
             <a

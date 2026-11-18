@@ -1,4 +1,3 @@
-import React from "react";
 import "./style/App.scss";
 
 // Components
@@ -20,7 +19,6 @@ const App = () => {
       <Resume />
       <Certificates />
       <Skills />
-      {/* <Portfolio /> */}
       <Contact />
       <Footer />
     </div>
