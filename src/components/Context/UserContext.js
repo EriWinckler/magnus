@@ -5,24 +5,23 @@ export const UserContext = createContext();
 export const UserProvider = (props) => {
   const [user, setUser] = useState([
     {
-      main: "Eri Winckler",
+      main: "Eridan Winckler",
       subMain:
-        "I am a software developer that uses React, Java and Python to create awesome stuff.",
+        "Backend & Platform Engineer: Java/Spring Boot, ERP integrations, Ansible, Docker, GitLab CI/CD, AWS",
       about:
-        "I started my journey as a developer learning Python and eventually fell in love with with React and Java as a perfect pair.",
-      address: "Remote",
-      state: "United States",
+        "Brazil-based backend and platform engineer with four-plus years of professional Java and Spring Boot development on a fully remote US team. I build enterprise content management and ERP integration platforms and the automation that provisions, deploys, and releases them: Ansible, Docker, GitLab CI/CD and AWS.",
+      address: "Brazil",
+      state: "remote (UTC-3)",
       email: "efwinckler@gmail.com",
-      school: "Uninter",
-      course: "Software Developer",
-      yearSpan: "2019-2022",
+      school: "Uninter International",
+      course: "B.S. in Software Engineering",
+      yearSpan: "2019 - 2022",
       schoolDescription:
-        "Software Development course learning all the most important principles of the industry and the Software Development Life Cycle.",
-      olderSchool: "CareerDevs",
-      olderCourse: "FullStack Developer",
-      olderYearSpan: "2021 - 2021",
-      olderSchoolDescription:
-        "Learning the best techniques and tricks focused on a real job environment in Java and React.",
+        "Bachelor's degree covering software engineering principles and the full software development life cycle.",
+      olderSchool: "Pontifícia Universidade Católica do Paraná (PUCPR)",
+      olderCourse: "Law studies",
+      olderYearSpan: "2008 - 2013",
+      olderSchoolDescription: "",
     },
   ]);
   return (

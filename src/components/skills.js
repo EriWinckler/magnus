@@ -24,40 +24,10 @@ const Skills = () => {
           <li>
             <span
               style={{
-                width: "60%",
+                width: "95%",
                 backgroundColor: getRandomColor(),
               }}
-              className="bar-expand python"
-            ></span>
-            <em>Python</em>
-          </li>
-          <li>
-            <span
-              style={{
-                width: "80%",
-                backgroundColor: getRandomColor(),
-              }}
-              className="bar-expand html"
-            ></span>
-            <em>ReactJS</em>
-          </li>
-          <li>
-            <span
-              style={{
-                width: "80%",
-                backgroundColor: getRandomColor(),
-              }}
-              className="bar-expand reactjs"
-            ></span>
-            <em>Javascript</em>
-          </li>
-          <li>
-            <span
-              style={{
-                width: "85%",
-                backgroundColor: getRandomColor(),
-              }}
-              className="bar-expand javascript"
+              className="bar-expand css"
             ></span>
             <em>Java</em>
           </li>
@@ -69,17 +39,47 @@ const Skills = () => {
               }}
               className="bar-expand css"
             ></span>
-            <em>CSS</em>
+            <em>Spring Boot</em>
           </li>
           <li>
             <span
               style={{
-                width: "95%",
+                width: "80%",
                 backgroundColor: getRandomColor(),
               }}
-              className="bar-expand html"
+              className="bar-expand javascript"
             ></span>
-            <em>HTML</em>
+            <em>Docker</em>
+          </li>
+          <li>
+            <span
+              style={{
+                width: "80%",
+                backgroundColor: getRandomColor(),
+              }}
+              className="bar-expand javascript"
+            ></span>
+            <em>Ansible</em>
+          </li>
+          <li>
+            <span
+              style={{
+                width: "80%",
+                backgroundColor: getRandomColor(),
+              }}
+              className="bar-expand javascript"
+            ></span>
+            <em>AWS</em>
+          </li>
+          <li>
+            <span
+              style={{
+                width: "70%",
+                backgroundColor: getRandomColor(),
+              }}
+              className="bar-expand reactjs"
+            ></span>
+            <em>GitLab CI/CD</em>
           </li>
         </ul>
       </div>

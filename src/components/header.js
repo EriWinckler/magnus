@@ -24,7 +24,7 @@ const Header = () => {
               <i className="fa fa-book"></i>Project
             </a>
             <a
-              href="https://www.linkedin.com/in/eridan-winckler-449798169/"
+              href="https://www.linkedin.com/in/eridan-winckler"
               target="_blank"
               rel="noopener noreferrer"
               className="button btn github-btn"

@@ -8,7 +8,7 @@ const Footer = () => {
           <ul className="social-links">
             <li>
               <a
-                href="https://www.linkedin.com/in/eridan-winckler-449798169/"
+                href="https://www.linkedin.com/in/eridan-winckler"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -24,19 +24,10 @@ const Footer = () => {
                 <i className="fa fa-github"></i>
               </a>
             </li>
-            <li>
-              <a
-                href="https://www.instagram.com/efwinckler/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa fa-instagram"></i>
-              </a>
-            </li>
           </ul>
 
           <ul className="copyright">
-            <li>&copy; Copyright {new Date().getFullYear()} Eri Winckler</li>
+            <li>&copy; Copyright {new Date().getFullYear()} Eridan Winckler</li>
           </ul>
         </div>
         <div id="go-top">

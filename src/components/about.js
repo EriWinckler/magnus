@@ -11,7 +11,7 @@ const About = () => {
         <img
           className="profile-pic"
           src={require("../images/me.jpg")}
-          alt="Eri's Pic"
+          alt="Eridan Winckler"
         />
       </div>
 
@@ -45,6 +45,15 @@ const About = () => {
               href="https://drive.google.com/file/d/1j88L68SdmxFCfw7gL0LCt7gj7YNQPZqP/view?usp=sharing"
             >
               <i className="fa fa-download"></i> Download Resume
+            </a>{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-btn cta-btn--resume"
+              style={{ color: "#000" }}
+              href="https://www.linkedin.com/in/eridan-winckler"
+            >
+              <i className="fa fa-linkedin"></i> LinkedIn
             </a>
           </p>
         </div>
