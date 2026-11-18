@@ -16,6 +16,27 @@
   font-size: 1.375rem;
 }
 
+.intro {
+  margin-block-end: 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+// Left-aligned bullets read better than a centered block of text.
+.highlights {
+  display: grid;
+  gap: 0.625rem;
+  margin-block-end: 1rem;
+  padding-inline-start: 1.25rem;
+  text-align: start;
+  line-height: 1.7;
+  color: var(--muted);
+
+  li::marker {
+    color: var(--gold);
+  }
+}
+
 .text {
   margin-block-end: 1.5rem;
   line-height: 1.9;

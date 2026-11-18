@@ -27,20 +27,20 @@
   background: var(--track);
 }
 
+// A transition (not a keyframe animation) from 0 to the value, started once when the list
+// scrolls into view, so it runs exactly once and never restarts.
 .fill {
   display: block;
   block-size: 100%;
-  inline-size: var(--value);
+  inline-size: 0;
   background: var(--navy);
 
-  @media (prefers-reduced-motion: no-preference) {
-    animation: grow 1.5s ease-out;
+  [data-in-view="true"] & {
+    inline-size: var(--value);
   }
-}
 
-@keyframes grow {
-  from {
-    inline-size: 0;
+  @media (prefers-reduced-motion: no-preference) {
+    transition: inline-size 1.2s ease-out;
   }
 }
 

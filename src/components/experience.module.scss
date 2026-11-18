@@ -3,12 +3,9 @@
 }
 
 .employer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.25rem 0.75rem;
   margin-block-end: 2.5rem;
   font-size: 1.25rem;
+  line-height: 1.5;
   text-align: center;
 }
 

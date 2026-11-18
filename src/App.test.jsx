@@ -39,7 +39,8 @@ describe("default page", () => {
       CONTENT.name,
       VARIANTS.default.headline,
       CONTENT.location,
-      VARIANTS.default.summary,
+      VARIANTS.default.intro,
+      ...VARIANTS.default.highlights,
       CONTENT.contactLocation,
       CONTENT.experience.employer,
       CONTENT.experience.employerLocation,
@@ -81,7 +82,8 @@ describe("default page", () => {
       "Anthropic Academy",
       "Completed in Apr 2026",
       "Completed in Mar 2026",
-      "Ovitas Inc. Burlington, MA, USA (fully remote)",
+      "Ovitas Inc.",
+      "Burlington, MA, USA (fully remote)",
       `\u00a9 ${new Date().getFullYear()} Eridan Winckler`,
     ].forEach((expected) => expect(text).toContain(expected));
     expect(page.querySelector('a[href="#home"] img').alt).toBe("Eridan Winckler, home");
@@ -167,7 +169,8 @@ describe("default page", () => {
 test("?cv=platform switches the headline and summary", () => {
   const text = render("/?cv=platform").textContent;
   expect(text).toContain(VARIANTS.platform.headline);
-  expect(text).toContain(VARIANTS.platform.summary);
+  expect(text).toContain(VARIANTS.platform.intro);
+  VARIANTS.platform.highlights.forEach((point) => expect(text).toContain(point));
   expect(text).not.toContain(VARIANTS.default.headline);
 });
 

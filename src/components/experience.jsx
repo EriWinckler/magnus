@@ -10,7 +10,8 @@ const Experience = () => (
         <span>Experience</span>
       </h2>
       <p className={styles.employer}>
-        <strong>{employer}</strong>{" "}
+        <strong>{employer}</strong>
+        <br />
         <span className={styles.employerLocation}>{employerLocation}</span>
       </p>
       {roles.map((role) => (

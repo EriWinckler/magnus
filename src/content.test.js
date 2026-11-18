@@ -13,7 +13,8 @@ describe("selectVariant", () => {
     const variant = selectVariant(search);
     expect(variant.key).toBe(key);
     expect(variant.headline).toBe(VARIANTS[key].headline);
-    expect(variant.summary).toBe(VARIANTS[key].summary);
+    expect(variant.intro).toBe(VARIANTS[key].intro);
+    expect(variant.highlights).toEqual(VARIANTS[key].highlights);
   });
 
   test.each(["", "?cv=bogus", "?cv=", "?lang=pt", "?cv=__proto__", "?cv=constructor", "?cv=toString"])(

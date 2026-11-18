@@ -1,5 +1,6 @@
-// All copy shown on the site. Text comes verbatim from Eridan's reviewed resume and its
-// Backend / Platform variants; do not paraphrase it here.
+// All copy shown on the site. Text comes from Eridan's reviewed resume and its Backend / Platform
+// variants; the About summaries are those paragraphs split into an intro and bullets, with no new
+// facts or claims. Do not paraphrase it here.
 
 export const LINKS = {
   linkedin: "https://www.linkedin.com/in/eridan-winckler",
@@ -19,19 +20,41 @@ export const VARIANTS = {
   default: {
     headline:
       "Backend & Platform Engineer: Java/Spring Boot, ERP integrations, Ansible, Docker, GitLab CI/CD, AWS",
-    summary:
-      "Brazil-based backend and platform engineer with four-plus years of professional Java and Spring Boot development (Jun 2022 to present) on a fully remote US team. Builds enterprise content management (ECM, ELO Digital Office) and ERP integration platforms and the automation that provisions, deploys, and releases them (Ansible, Docker, GitLab CI/CD, AWS): turned a ~50-step server setup into a single Ansible run and authored the CI/CD recommendation, adopted May 2026, that is moving the company from Jenkins to GitLab. Delivers customer projects end to end, from bare-VM install to production incident response, and documents for handover by default (65 Confluence pages, 22 decision records).",
+    intro:
+      "Brazil-based backend and platform engineer with four-plus years of professional Java and Spring Boot development (Jun 2022 to present) on a fully remote US team.",
+    highlights: [
+      "Builds enterprise content management (ECM, ELO Digital Office) and ERP integration platforms and the automation that provisions, deploys, and releases them (Ansible, Docker, GitLab CI/CD, AWS).",
+      "Turned a ~50-step server setup into a single Ansible run.",
+      "Authored the CI/CD recommendation, adopted May 2026, that is moving the company from Jenkins to GitLab.",
+      "Delivers customer projects end to end, from bare-VM install to production incident response.",
+      "Documents for handover by default (65 Confluence pages, 22 decision records).",
+    ],
   },
   backend: {
     headline: "Backend Engineer | Java 17/21, Spring Boot, REST APIs, ERP Integrations, Docker, AWS",
-    summary:
-      "Brazil-based backend engineer with four-plus years of professional Java and Spring Boot development (Jun 2022 to present) on a fully remote US team. Builds Java/Spring Boot services, including a Testcontainers-tested sync service feeding an AWS Bedrock knowledge base, and maintains REST API integrations between enterprise content management (ECM, ELO Digital Office) and ERP/SaaS platforms (Business Central, QuickBooks Online, SAP Business One, DocuSign). Also builds the automation that provisions, deploys, and releases the platform (Ansible, Docker, GitLab CI/CD, AWS) and authored the CI/CD recommendation, adopted May 2026, moving the company from Jenkins to GitLab. Delivers customer projects end to end, from bare-VM install to production incident response, and documents for handover by default (65 Confluence pages, 22 decision records).",
+    intro:
+      "Brazil-based backend engineer with four-plus years of professional Java and Spring Boot development (Jun 2022 to present) on a fully remote US team.",
+    highlights: [
+      "Builds Java/Spring Boot services, including a Testcontainers-tested sync service feeding an AWS Bedrock knowledge base.",
+      "Maintains REST API integrations between enterprise content management (ECM, ELO Digital Office) and ERP/SaaS platforms (Business Central, QuickBooks Online, SAP Business One, DocuSign).",
+      "Builds the automation that provisions, deploys, and releases the platform (Ansible, Docker, GitLab CI/CD, AWS).",
+      "Authored the CI/CD recommendation, adopted May 2026, moving the company from Jenkins to GitLab.",
+      "Delivers customer projects end to end, from bare-VM install to production incident response.",
+      "Documents for handover by default (65 Confluence pages, 22 decision records).",
+    ],
   },
   platform: {
     headline:
       "Platform / DevOps Engineer | Ansible (IaC), GitLab CI/CD, Docker, AWS, Linux, Bash, Java",
-    summary:
-      "Brazil-based platform and DevOps engineer on a fully remote US team (Jun 2022 to present), automating how enterprise content management (ECM, ELO Digital Office) and ERP integration platforms are provisioned, deployed, and released: infrastructure as code with Ansible, GitLab CI/CD pipelines, Docker, Linux administration, and AWS. Turned a ~50-step server setup into a single Ansible run and authored the CI/CD recommendation, adopted May 2026, that is moving the company from Jenkins to GitLab. Delivers customer projects end to end, from bare-VM install to production incident response, and documents for handover by default (65 Confluence pages, 22 decision records). Four-plus years of professional Java and Spring Boot development.",
+    intro:
+      "Brazil-based platform and DevOps engineer on a fully remote US team (Jun 2022 to present), with four-plus years of professional Java and Spring Boot development.",
+    highlights: [
+      "Automates how enterprise content management (ECM, ELO Digital Office) and ERP integration platforms are provisioned, deployed, and released: infrastructure as code with Ansible, GitLab CI/CD pipelines, Docker, Linux administration, and AWS.",
+      "Turned a ~50-step server setup into a single Ansible run.",
+      "Authored the CI/CD recommendation, adopted May 2026, that is moving the company from Jenkins to GitLab.",
+      "Delivers customer projects end to end, from bare-VM install to production incident response.",
+      "Documents for handover by default (65 Confluence pages, 22 decision records).",
+    ],
   },
 };
 

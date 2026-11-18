@@ -8,7 +8,12 @@ const About = ({ variant }) => (
     <div className={`container ${styles.about}`}>
       <img className={styles.photo} src={me} alt="Eridan Winckler" width="140" height="140" />
       <h2 className={styles.heading}>About Me</h2>
-      <p className={styles.text}>{variant.summary}</p>
+      <p className={styles.intro}>{variant.intro}</p>
+      <ul className={styles.highlights}>
+        {variant.highlights.map((point) => (
+          <li key={point}>{point}</li>
+        ))}
+      </ul>
 
       <h2 className={styles.heading}>Contact Details</h2>
       <p className={styles.text}>
