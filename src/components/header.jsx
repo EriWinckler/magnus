@@ -41,7 +41,7 @@ const Header = ({ variant }) => {
       <a className={styles.scrolldown} href="#about" aria-label="Scroll to About">
         <ChevronDownIcon size={28} />
       </a>
-      {!reducedMotion && <ParticlesBg type="thick" num={particles} color="#0b1f3a" bg={true} />}
+      {!reducedMotion && <ParticlesBg type="thick" num={particles} bg={true} />}
     </header>
   );
 };

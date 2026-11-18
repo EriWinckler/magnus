@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import logo from "../images/icon-48x48.png";
 import { CloseIcon, MenuIcon } from "./icons";
 import styles from "./navigation.module.scss";
@@ -13,11 +13,15 @@ const LINKS = [
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
+  const toggleRef = useRef(null);
 
   useEffect(() => {
     if (!open) return undefined;
     const onKeyDown = (event) => {
-      if (event.key === "Escape") setOpen(false);
+      if (event.key === "Escape") {
+        setOpen(false);
+        toggleRef.current?.focus();
+      }
     };
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
@@ -30,6 +34,7 @@ const Navigation = () => {
           <img src={logo} alt="Eridan Winckler, home" width="40" height="40" />
         </a>
         <button
+          ref={toggleRef}
           type="button"
           className={styles.toggle}
           aria-expanded={open}

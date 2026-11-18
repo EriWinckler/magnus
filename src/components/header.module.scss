@@ -15,11 +15,16 @@
 }
 
 // A soft navy scrim keeps the text readable over the particles.
-// particles-bg repaints its canvas with a 2% fill of the background color every frame; with a
-// dark navy, 8-bit rounding drifts that fill toward black. Screen blending turns the dark canvas
-// transparent, so the hero's own navy shows through and only the particles add light.
+// particles-bg repaints its canvas every frame with a 2% black fill (no color prop is passed, so
+// the canvas has no background of its own). Screen blending makes that black transparent, so the
+// hero's own navy shows through exactly and only the particles add light.
 .hero :global(canvas) {
   mix-blend-mode: screen;
+}
+
+// On the navy hero the focus ring switches to gold so it stays visible.
+.hero :focus-visible {
+  outline-color: var(--gold);
 }
 
 .banner {

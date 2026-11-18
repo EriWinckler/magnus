@@ -3,6 +3,8 @@ $nav-collapse: 991px; // at or below: hamburger menu
 $phone: 600px;
 
 @mixin below($width) {
+  // Range syntax. Vite 8 builds JS and CSS for its default "baseline-widely-available" target
+  // (Chrome/Edge 111, Firefox 114, Safari/iOS 16.4) and emits range queries either way.
   @media (width <= $width) {
     @content;
   }

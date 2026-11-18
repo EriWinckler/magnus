@@ -60,6 +60,42 @@ describe("default page", () => {
     expect(page.querySelectorAll("h1")).toHaveLength(1);
   });
 
+  test("shows the fixed labels, headings and accessible names", () => {
+    const page = render();
+    const text = page.textContent;
+    [
+      "About Me",
+      "Contact Details",
+      "Experience",
+      "Skills",
+      "Also worked with",
+      "Education & Certifications",
+      "Education",
+      "Certifications",
+      "Contact",
+      "Resume",
+      "Download Resume",
+      "Email me",
+      "LinkedIn",
+      "GitHub",
+      "Anthropic Academy",
+      "Completed in Apr 2026",
+      "Completed in Mar 2026",
+      "Ovitas Inc. Burlington, MA, USA (fully remote)",
+      `\u00a9 ${new Date().getFullYear()} Eridan Winckler`,
+    ].forEach((expected) => expect(text).toContain(expected));
+    expect(page.querySelector('a[href="#home"] img').alt).toBe("Eridan Winckler, home");
+    expect(page.querySelector("#about img").alt).toBe("Eridan Winckler");
+    ["Scroll to About", "Back to top", "Menu", "LinkedIn", "GitHub"].forEach((label) =>
+      expect(page.querySelector(`[aria-label="${label}"]`)).not.toBeNull()
+    );
+  });
+
+  // Every visible string, so a change to any copy in src/content.js has to be reviewed here.
+  test("page text matches the reviewed copy", () => {
+    expect(render().textContent).toMatchSnapshot();
+  });
+
   test("never shows removed, invented or private text", () => {
     const text = render().textContent;
     [
@@ -133,6 +169,14 @@ test("?cv=platform switches the headline and summary", () => {
   expect(text).toContain(VARIANTS.platform.headline);
   expect(text).toContain(VARIANTS.platform.summary);
   expect(text).not.toContain(VARIANTS.default.headline);
+});
+
+test("?cv=platform page text matches the reviewed copy", () => {
+  expect(render("/?cv=platform").textContent).toMatchSnapshot();
+});
+
+test("?cv=backend page text matches the reviewed copy", () => {
+  expect(render("/?cv=backend").textContent).toMatchSnapshot();
 });
 
 test("reduced motion removes the particles", () => {
