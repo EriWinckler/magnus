@@ -1,0 +1,73 @@
+<!doctype html>
+<!-- Source of public/og-image.png (the link-preview card). Regenerate with tools/README.md. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    @font-face {
+      font-family: "Open Sans";
+      font-weight: 400;
+      src: url("/node_modules/@fontsource/open-sans/files/open-sans-latin-400-normal.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: "Open Sans";
+      font-weight: 700;
+      src: url("/node_modules/@fontsource/open-sans/files/open-sans-latin-700-normal.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: "Libre Baskerville";
+      font-weight: 400;
+      src: url("/node_modules/@fontsource/libre-baskerville/files/libre-baskerville-latin-400-normal.woff2") format("woff2");
+    }
+    html, body { margin: 0; }
+    .card {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      gap: 64px;
+      width: 1200px;
+      height: 630px;
+      padding: 0 96px;
+      background:
+        radial-gradient(circle at 85% 15%, rgb(212 160 23 / 0.18), transparent 45%),
+        #0b1f3a;
+      font-family: "Open Sans", sans-serif;
+    }
+    .photo {
+      flex: none;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 6px solid #d4a017;
+      object-fit: cover;
+    }
+    h1 {
+      margin: 0 0 20px;
+      font-size: 76px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #d4a017;
+    }
+    .title {
+      margin: 0 0 28px;
+      font-family: "Libre Baskerville", serif;
+      font-size: 36px;
+      color: #e6e9ef;
+    }
+    .rule { width: 120px; height: 4px; margin: 0 0 28px; background: #d4a017; }
+    .site { margin: 0; font-size: 26px; color: #b8c2d0; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="photo" src="/src/images/me.jpg" alt="" />
+    <div>
+      <h1>Eridan<br />Winckler</h1>
+      <p class="title">Backend &amp; Platform Engineer</p>
+      <div class="rule"></div>
+      <p class="site">eriwinckler.netlify.app</p>
+    </div>
+  </div>
+</body>
+</html>
