@@ -1,37 +1,56 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { useEffect, useState } from "react";
 import logo from "../images/icon-48x48.png";
+import { CloseIcon, MenuIcon } from "./icons";
+import styles from "./navigation.module.scss";
 
-const navigation = () => {
+const LINKS = [
+  { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
+  { href: "#skills", label: "Skills" },
+  { href: "#education", label: "Education" },
+  { href: "#contact", label: "Contact" },
+];
+
+const Navigation = () => {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
   return (
-    <Navbar
-      className="bs-navbar-collapse"
-      bg="light"
-      variant="light"
-      fixed="top"
-      expand="lg"
-      collapseOnSelect
-    >
-      <Container>
-        <Navbar.Brand href="#home" className="navbarBrand">
-          <img src={logo} alt="logo" />
-        </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="responsive-navbar-nav"
-          className="ml-auto"
-        />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mx-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#resume">Education</Nav.Link>
-            <Nav.Link href="#certificates">Certificates</Nav.Link>
-            <Nav.Link href="#languages">Skills</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav className={styles.nav} aria-label="Main">
+      <div className={styles.inner}>
+        <a href="#home" className={styles.brand}>
+          <img src={logo} alt="Eridan Winckler, home" width="40" height="40" />
+        </a>
+        <button
+          type="button"
+          className={styles.toggle}
+          aria-expanded={open}
+          aria-controls="nav-menu"
+          aria-label="Menu"
+          onClick={() => setOpen((value) => !value)}
+        >
+          {open ? <CloseIcon size={24} /> : <MenuIcon size={24} />}
+        </button>
+        <ul id="nav-menu" className={styles.menu} data-open={open}>
+          {LINKS.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} onClick={() => setOpen(false)}>
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
   );
 };
 
-export default navigation;
+export default Navigation;

@@ -1,28 +1,31 @@
-import { Container } from "react-bootstrap";
+import { CONTENT, LINKS } from "../content";
+import { LinkedInIcon, MailIcon } from "./icons";
+import styles from "./contact.module.scss";
 
-const Contact = () => {
-  return (
-    <section id="contact">
-      <Container>
-        <div className="contact-wrapper">
-          <h1 className="contact-wrapper __text" id="contact">
-            Contact
-          </h1>
-          <p className="contact-wrapper __text">
-            Would you like to work with me? Awesome!
-          </p>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cta-btn cta-btn--resume"
-            href="mailto:efwinckler@gmail.com"
-          >
-            Let's Talk
-          </a>
-        </div>
-      </Container>
-    </section>
-  );
-};
+const Contact = () => (
+  <section id="contact" className={styles.contact}>
+    <div className="container">
+      <h2 className={`section-title ${styles.title}`}>
+        <span>Contact</span>
+      </h2>
+      <p className={styles.text}>{CONTENT.contactText}</p>
+      <div className="button-row">
+        <a className={`btn ${styles.button}`} href={`mailto:${LINKS.email}`}>
+          <MailIcon />
+          Email me
+        </a>
+        <a
+          className={`btn ${styles.button}`}
+          href={LINKS.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <LinkedInIcon />
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+);
 
 export default Contact;

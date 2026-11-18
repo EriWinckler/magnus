@@ -1,0 +1,87 @@
+@use "../styles/breakpoints" as *;
+
+.nav {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: 50;
+  background: rgb(248 249 250 / 0.97);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  block-size: var(--nav-height);
+  inline-size: min(100% - 2 * var(--gutter), var(--container));
+  margin-inline: auto;
+}
+
+.brand {
+  display: inline-flex;
+  padding: 0.25rem;
+}
+
+.menu {
+  display: flex;
+  gap: 0.25rem;
+  margin-inline: auto;
+  padding-inline-end: 3rem; // balances the brand so the links sit centered
+  list-style: none;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    min-block-size: 2.75rem;
+    padding-inline: 0.75rem;
+    color: var(--muted);
+    font-size: 0.9375rem;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--navy);
+    }
+  }
+}
+
+.toggle {
+  display: none;
+}
+
+@include below($nav-collapse) {
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 2.75rem;
+    block-size: 2.75rem;
+    margin-inline-start: auto;
+    padding: 0;
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--navy);
+    cursor: pointer;
+  }
+
+  .menu {
+    position: absolute;
+    inset-block-start: var(--nav-height);
+    inset-inline: 0;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0.5rem var(--gutter) 1rem;
+    background: var(--white);
+    box-shadow: 0 8px 16px rgb(11 31 58 / 0.12);
+
+    &[data-open="false"] {
+      display: none;
+    }
+
+    a {
+      inline-size: 100%;
+      font-size: 1.0625rem;
+    }
+  }
+}

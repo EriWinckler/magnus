@@ -1,0 +1,9 @@
+// Breakpoints live in Sass because custom properties cannot be used inside media queries.
+$nav-collapse: 991px; // at or below: hamburger menu
+$phone: 600px;
+
+@mixin below($width) {
+  @media (width <= $width) {
+    @content;
+  }
+}

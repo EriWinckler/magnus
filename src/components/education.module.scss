@@ -1,0 +1,78 @@
+.subheading {
+  margin-block: 0 1.5rem;
+  font-size: 1.25rem;
+  text-align: center;
+
+  &:not(:first-of-type) {
+    margin-block-start: 3.5rem;
+  }
+}
+
+.schools {
+  display: grid;
+  gap: 2.25rem;
+  max-inline-size: 36rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.schoolName {
+  font-size: clamp(1.25rem, 3vw, 1.5625rem);
+}
+
+.info {
+  margin-block-start: 0.5rem;
+  font-family: var(--font-serif);
+  color: var(--muted);
+
+  em {
+    font-style: italic;
+  }
+}
+
+.years {
+  font-family: var(--font-sans);
+}
+
+.description {
+  margin-block-start: 0.75rem;
+  color: var(--muted);
+}
+
+.certificates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1rem 2rem;
+  max-inline-size: 40rem;
+  margin-inline: auto;
+  list-style: none;
+  text-align: center;
+}
+
+.certificate {
+  padding: 1rem;
+
+  p {
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+}
+
+.certificateTitle {
+  margin-block-end: 0.25rem;
+  font-size: 1rem;
+
+  a {
+    display: inline-block;
+    padding-block: 0.25rem;
+    color: var(--text);
+
+    &:hover {
+      color: var(--navy-hover);
+    }
+  }
+}
+
+.date {
+  font-size: 0.8125rem;
+}

@@ -1,0 +1,50 @@
+.experience {
+  max-inline-size: 48rem;
+}
+
+.employer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 0.75rem;
+  margin-block-end: 2.5rem;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.employerLocation {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.role + .role {
+  margin-block-start: 2.5rem;
+  padding-block-start: 2.5rem;
+  border-block-start: 1px solid var(--border);
+}
+
+.title {
+  font-size: 1.375rem;
+}
+
+.dates {
+  margin-block: 0.25rem 1rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--muted);
+}
+
+.bullets {
+  display: grid;
+  gap: 0.875rem;
+  padding-inline-start: 1.25rem;
+  line-height: 1.7;
+
+  li {
+    overflow-wrap: anywhere;
+  }
+
+  li::marker {
+    color: var(--gold);
+  }
+}

@@ -1,80 +1,46 @@
+import { CONTENT } from "../content";
+import styles from "./skills.module.scss";
 
-const Skills = () => {
-  return (
-    <section id="languages">
-      <div className="sectionHeader">
-        <h1>
-          <span>Skills</span>
-        </h1>
-      </div>
+const Skills = () => (
+  <section id="skills" className="section section--surface">
+    <div className={`container ${styles.skills}`}>
+      <h2 className="section-title">
+        <span>Skills</span>
+      </h2>
+      <ul className={styles.bars}>
+        {CONTENT.skillBars.map(({ label, value }) => {
+          const id = `skill-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+          return (
+            <li key={label}>
+              <span id={id} className={styles.label}>
+                {label}
+              </span>
+              <span
+                className={styles.track}
+                role="meter"
+                aria-labelledby={id}
+                aria-valuemin={0}
+                aria-valuemax={100}
+                aria-valuenow={value}
+              >
+                <span className={styles.fill} style={{ "--value": `${value}%` }} />
+              </span>
+            </li>
+          );
+        })}
+      </ul>
 
-      <br />
-      <div className="skillsBars">
-        <ul className="skills">
-          <li>
-            <span
-              style={{
-                width: "95%",
-                backgroundColor: "#0B1F3A",
-              }}
-              className="bar-expand css"
-            ></span>
-            <em>Java</em>
-          </li>
-          <li>
-            <span
-              style={{
-                width: "90%",
-                backgroundColor: "#0B1F3A",
-              }}
-              className="bar-expand css"
-            ></span>
-            <em>Spring Boot</em>
-          </li>
-          <li>
-            <span
-              style={{
-                width: "80%",
-                backgroundColor: "#0B1F3A",
-              }}
-              className="bar-expand javascript"
-            ></span>
-            <em>Docker</em>
-          </li>
-          <li>
-            <span
-              style={{
-                width: "80%",
-                backgroundColor: "#0B1F3A",
-              }}
-              className="bar-expand javascript"
-            ></span>
-            <em>Ansible</em>
-          </li>
-          <li>
-            <span
-              style={{
-                width: "80%",
-                backgroundColor: "#0B1F3A",
-              }}
-              className="bar-expand javascript"
-            ></span>
-            <em>AWS</em>
-          </li>
-          <li>
-            <span
-              style={{
-                width: "70%",
-                backgroundColor: "#0B1F3A",
-              }}
-              className="bar-expand reactjs"
-            ></span>
-            <em>GitLab CI/CD</em>
-          </li>
-        </ul>
-      </div>
-    </section>
-  );
-};
+      <h3 className={styles.groupsTitle}>Also worked with</h3>
+      <dl className={styles.groups}>
+        {CONTENT.skillGroups.map(({ label, items }) => (
+          <div key={label} className={styles.group}>
+            <dt>{label}</dt>
+            <dd>{items}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+);
 
 export default Skills;

@@ -1,86 +1,151 @@
 import { act } from "react";
-import { expect, test, vi } from "vitest";
 import { createRoot } from "react-dom/client";
+import { afterEach, describe, expect, test, vi } from "vitest";
 import App from "./App";
+import { CONTENT, LINKS, RESUME_URLS, VARIANTS } from "./content";
 
 // jsdom has no canvas, which particles-bg needs.
-vi.mock("particles-bg", () => ({ default: () => null }));
+vi.mock("particles-bg", () => ({ default: () => <div data-testid="particles" /> }));
 
 globalThis.IS_REACT_ACT_ENVIRONMENT = true;
 
-test("renders the site content that matches the current resume", () => {
-  const container = document.createElement("div");
+let root;
+let container;
+
+function render(path = "/") {
+  window.history.replaceState({}, "", path);
+  container = document.createElement("div");
   document.body.appendChild(container);
-  const root = createRoot(container);
+  root = createRoot(container);
+  act(() => root.render(<App />));
+  return container;
+}
 
-  act(() => {
-    root.render(
-      <App />
-    );
-  });
-
-  const text = container.textContent;
-  [
-    "Eridan Winckler",
-    "Backend & Platform Engineer",
-    "Uninter International",
-    "B.S. in Software Engineering",
-    "Law studies",
-    "Pontifícia Universidade Católica do Paraná (PUCPR)",
-    "Java",
-    "Spring Boot",
-    "Ansible",
-    "Docker",
-    "GitLab CI/CD",
-    "AWS",
-  ].forEach((expected) => expect(text).toContain(expected));
-  [
-    "Eri Winckler",
-    "United States",
-    "CareerDevs",
-    "React, Java and Python",
-    "Monkeytype",
-    "On-line Classes Completed",
-    "Pontifical",
-  ].forEach((removed) => expect(text).not.toContain(removed));
-
-  // The tagline also names these skills, so check the Skills section itself.
-  const textsOf = (selector) =>
-    Array.from(container.querySelectorAll(selector), (el) => el.textContent);
-  expect(textsOf("#languages em")).toEqual([
-    "Java",
-    "Spring Boot",
-    "Docker",
-    "Ansible",
-    "AWS",
-    "GitLab CI/CD",
-  ]);
-  expect(
-    Array.from(
-      container.querySelectorAll("#languages .bar-expand"),
-      (bar) => bar.style.width
-    )
-  ).toEqual(["95%", "90%", "80%", "80%", "80%", "70%"]);
-  expect(textsOf("#certificates h6").map((t) => t.trim())).toEqual([
-    "Model Context Protocol",
-    "Claude Code in Action",
-    "Building with the Claude API",
-    "Agent Skills",
-  ]);
-
-  const hrefs = Array.from(container.querySelectorAll("a[href]"), (a) =>
-    a.getAttribute("href")
-  );
-  expect(hrefs).toContain("https://www.linkedin.com/in/eridan-winckler");
-  expect(hrefs.filter((h) => h.includes("449798169"))).toEqual([]);
-  expect(hrefs.filter((h) => h.includes("instagram"))).toEqual([]);
-  expect(
-    hrefs.filter((h) => h.startsWith("https://verify.skilljar.com/"))
-  ).toHaveLength(4);
-  expect(
-    hrefs.filter((h) => h.includes("1j88L68SdmxFCfw7gL0LCt7gj7YNQPZqP"))
-  ).toHaveLength(1);
-
+afterEach(() => {
   act(() => root.unmount());
   container.remove();
+  window.history.replaceState({}, "", "/");
+});
+
+const texts = (el, selector) =>
+  Array.from(el.querySelectorAll(selector), (node) => node.textContent.trim());
+
+describe("default page", () => {
+  test("shows the resume copy in recruiter order", () => {
+    const page = render();
+    const text = page.textContent;
+
+    [
+      CONTENT.name,
+      VARIANTS.default.headline,
+      CONTENT.location,
+      VARIANTS.default.summary,
+      CONTENT.contactLocation,
+      CONTENT.experience.employer,
+      CONTENT.experience.employerLocation,
+      CONTENT.contactText,
+      ...CONTENT.experience.roles.flatMap((role) => [role.title, role.dates, ...role.bullets]),
+      ...CONTENT.skillGroups.flatMap((group) => [group.label, group.items]),
+      ...CONTENT.education.flatMap((entry) => [entry.school, entry.course, entry.years]),
+    ].forEach((expected) => expect(text).toContain(expected));
+
+    expect(Array.from(page.querySelectorAll("main > section"), (s) => s.id)).toEqual([
+      "about",
+      "experience",
+      "skills",
+      "education",
+      "contact",
+    ]);
+    expect(texts(page, "nav li a")).toEqual(["About", "Experience", "Skills", "Education", "Contact"]);
+    expect(page.querySelectorAll("h1")).toHaveLength(1);
+  });
+
+  test("never shows removed, invented or private text", () => {
+    const text = render().textContent;
+    [
+      "United States",
+      "CareerDevs",
+      "Eri Winckler",
+      "React, Java and Python",
+      "Monkeytype",
+      "Pontifical",
+      "On-line Classes Completed",
+      "Built and maintained",
+      "Seeking",
+      "C2C",
+      "1099",
+      "Would you like to work with me",
+      "—", // em dash
+      "–", // en dash
+    ].forEach((removed) => expect(text).not.toContain(removed));
+    // No phone numbers of any shape.
+    expect(text).not.toMatch(/\+\d{1,3}[\s-]?\d{2,3}[\s-]\d{3,5}-\d{4}/);
+    expect(text).not.toMatch(/\b\d{3}-\d{4}\b/);
+  });
+
+  test("shows the skill bars Eridan rated, in order, as meters", () => {
+    const meters = Array.from(render().querySelectorAll("#skills [role=meter]"));
+    expect(
+      meters.map((meter) => [
+        document.getElementById(meter.getAttribute("aria-labelledby")).textContent,
+        Number(meter.getAttribute("aria-valuenow")),
+      ])
+    ).toEqual([
+      ["Java", 95],
+      ["Spring Boot", 90],
+      ["GitLab CI/CD", 85],
+      ["Linux", 85],
+      ["Docker", 80],
+      ["Ansible", 80],
+      ["AWS", 80],
+      ["SQL", 80],
+    ]);
+  });
+
+  test("links to the resume, profiles and verifiable certificates", () => {
+    const page = render();
+    const hrefs = Array.from(page.querySelectorAll("a[href]"), (a) => a.getAttribute("href"));
+    expect(hrefs.filter((h) => h === RESUME_URLS.default)).toHaveLength(2);
+    expect(hrefs).toContain(LINKS.linkedin);
+    expect(hrefs).toContain(LINKS.github);
+    expect(hrefs).toContain(`mailto:${LINKS.email}`);
+    expect(hrefs.filter((h) => h.startsWith("https://verify.skilljar.com/"))).toHaveLength(4);
+    expect(texts(page, "#education h4 a")).toEqual(CONTENT.certifications.map((c) => c.title));
+    expect(hrefs.filter((h) => h.includes("instagram"))).toEqual([]);
+  });
+
+  test("every icon-only link has an accessible name", () => {
+    const page = render();
+    Array.from(page.querySelectorAll("a"))
+      .filter((a) => a.textContent.trim() === "")
+      .forEach((a) =>
+        expect(a.getAttribute("aria-label") || a.querySelector("img[alt]")?.alt).toBeTruthy()
+      );
+  });
+
+  test("shows the particles hero when motion is allowed", () => {
+    expect(render().querySelector("[data-testid=particles]")).not.toBeNull();
+  });
+});
+
+test("?cv=platform switches the headline and summary", () => {
+  const text = render("/?cv=platform").textContent;
+  expect(text).toContain(VARIANTS.platform.headline);
+  expect(text).toContain(VARIANTS.platform.summary);
+  expect(text).not.toContain(VARIANTS.default.headline);
+});
+
+test("reduced motion removes the particles", () => {
+  const original = window.matchMedia;
+  window.matchMedia = (query) => ({
+    matches: query.includes("reduce"),
+    media: query,
+    addEventListener() {},
+    removeEventListener() {},
+  });
+  try {
+    expect(render().querySelector("[data-testid=particles]")).toBeNull();
+  } finally {
+    window.matchMedia = original;
+  }
 });

@@ -1,42 +1,28 @@
+import { CONTENT, LINKS } from "../content";
+import { ChevronUpIcon, GitHubIcon, LinkedInIcon } from "./icons";
+import styles from "./footer.module.scss";
 
-const Footer = () => {
-  return (
-    <footer>
-      <div className="row">
-        <div className="twelve columns">
-          <ul className="social-links">
-            <li>
-              <a
-                href="https://www.linkedin.com/in/eridan-winckler"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa fa-linkedin"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/EriWinckler"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa fa-github"></i>
-              </a>
-            </li>
-          </ul>
-
-          <ul className="copyright">
-            <li>&copy; Copyright {new Date().getFullYear()} Eridan Winckler</li>
-          </ul>
-        </div>
-        <div id="go-top">
-          <a className="smoothscroll" title="Back to Top" href="#home">
-            <i className="icon-up-open"></i>
-          </a>
-        </div>
-      </div>
-    </footer>
-  );
-};
+const Footer = () => (
+  <footer className={styles.footer}>
+    <a className={styles.top} href="#home" aria-label="Back to top">
+      <ChevronUpIcon size={26} />
+    </a>
+    <ul className={styles.social}>
+      <li>
+        <a href={LINKS.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <LinkedInIcon size={28} />
+        </a>
+      </li>
+      <li>
+        <a href={LINKS.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <GitHubIcon size={28} />
+        </a>
+      </li>
+    </ul>
+    <p className={styles.copyright}>
+      &copy; {new Date().getFullYear()} {CONTENT.name}
+    </p>
+  </footer>
+);
 
 export default Footer;

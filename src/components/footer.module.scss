@@ -1,0 +1,47 @@
+.footer {
+  position: relative;
+  padding-block: 3rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+// Round button overlapping the gold Contact band, as in the original design.
+.top {
+  position: absolute;
+  inset-block-start: -1.75rem;
+  inset-inline-start: 50%;
+  translate: -50% 0;
+  display: grid;
+  place-items: center;
+  inline-size: 3.5rem;
+  block-size: 3.5rem;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+
+  &:hover {
+    background: var(--navy-hover);
+    color: var(--white);
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-block: 1rem 1.25rem;
+  list-style: none;
+
+  a {
+    display: grid;
+    place-items: center;
+    inline-size: 2.75rem;
+    block-size: 2.75rem;
+    color: var(--muted);
+
+    &:hover {
+      color: var(--navy);
+    }
+  }
+}

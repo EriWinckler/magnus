@@ -1,0 +1,91 @@
+@use "../styles/breakpoints" as *;
+
+// The navy background is painted here too, so the hero stays readable when the particles
+// canvas is off (reduced motion) or fails.
+.hero {
+  position: relative;
+  isolation: isolate; // keeps the particles canvas (z-index: -1) inside the hero
+  display: grid;
+  place-items: center;
+  min-block-size: 100svh;
+  padding: calc(var(--nav-height) + 2rem) var(--gutter) 6rem;
+  overflow: hidden;
+  background: var(--navy);
+  text-align: center;
+}
+
+// A soft navy scrim keeps the text readable over the particles.
+// particles-bg repaints its canvas with a 2% fill of the background color every frame; with a
+// dark navy, 8-bit rounding drifts that fill toward black. Screen blending turns the dark canvas
+// transparent, so the hero's own navy shows through and only the particles add light.
+.hero :global(canvas) {
+  mix-blend-mode: screen;
+}
+
+.banner {
+  inline-size: min(100%, 56rem);
+  padding: clamp(1rem, 4vw, 2.5rem);
+  background: radial-gradient(closest-side, rgb(11 31 58 / 0.9) 60%, rgb(11 31 58 / 0));
+}
+
+.name {
+  margin-block-end: 1.125rem;
+  font-size: clamp(2.75rem, 9vw, 5.625rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--gold);
+  overflow-wrap: anywhere;
+}
+
+.rule {
+  inline-size: 60%;
+  margin: 1.125rem auto 1.5rem;
+  border: 0;
+  border-block-start: 1px solid rgb(150 150 150 / 0.25);
+}
+
+.headline,
+.location {
+  text-shadow: 0 1px 3px rgb(0 0 0 / 0.8);
+}
+
+.headline {
+  max-inline-size: 42rem;
+  margin: 0 auto 1rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2.4vw, 1.125rem);
+  line-height: 1.9;
+  color: var(--hero-text);
+}
+
+.location {
+  margin-block-end: 2rem;
+  font-size: 0.9375rem;
+  color: var(--hero-muted);
+}
+
+.scrolldown {
+  position: absolute;
+  inset-block-end: 1.75rem;
+  inset-inline-start: 50%;
+  translate: -50% 0;
+  display: grid;
+  place-items: center;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--navy);
+
+  &:hover {
+    background: var(--gold);
+    color: var(--text);
+  }
+}
+
+@include below($phone) {
+  .rule {
+    inline-size: 80%;
+  }
+}

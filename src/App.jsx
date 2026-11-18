@@ -1,27 +1,32 @@
-import "./style/App.scss";
-
-// Components
-import Header from "./components/header";
-import Footer from "./components/footer";
 import About from "./components/about";
-import Resume from "./components/resume";
 import Contact from "./components/contact";
-import Skills from "./components/skills";
-import Certificates from "./components/certificates";
+import Education from "./components/education";
+import Experience from "./components/experience";
+import Footer from "./components/footer";
+import Header from "./components/header";
 import Navigation from "./components/navigation";
+import Skills from "./components/skills";
+import { selectVariant } from "./content";
 
 const App = () => {
+  const variant = selectVariant(window.location.search);
+
   return (
-    <div className="App">
+    <>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
       <Navigation />
-      <Header />
-      <About />
-      <Resume />
-      <Certificates />
-      <Skills />
-      <Contact />
+      <Header variant={variant} />
+      <main id="main">
+        <About variant={variant} />
+        <Experience />
+        <Skills />
+        <Education />
+        <Contact />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 };
 

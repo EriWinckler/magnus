@@ -1,62 +1,36 @@
+import { CONTENT, LINKS } from "../content";
 import me from "../images/me.jpg";
-import { CONTENT } from "../content";
+import { DownloadIcon, LinkedInIcon } from "./icons";
+import styles from "./about.module.scss";
 
-const About = () => {
-  return (
-    <section id="about">
-      <div className="container">
-        <img
-          className="profile-pic"
-          src={me}
-          alt="Eridan Winckler"
-        />
+const About = ({ variant }) => (
+  <section id="about" className="section section--surface">
+    <div className={`container ${styles.about}`}>
+      <img className={styles.photo} src={me} alt="Eridan Winckler" width="140" height="140" />
+      <h2 className={styles.heading}>About Me</h2>
+      <p className={styles.text}>{variant.summary}</p>
+
+      <h2 className={styles.heading}>Contact Details</h2>
+      <p className={styles.text}>
+        {CONTENT.name}
+        <br />
+        {CONTENT.contactLocation}
+        <br />
+        <a href={`mailto:${LINKS.email}`}>{LINKS.email}</a>
+      </p>
+
+      <div className="button-row">
+        <a className="btn btn--dark" href={variant.resumeUrl} target="_blank" rel="noopener noreferrer">
+          <DownloadIcon />
+          Download Resume
+        </a>
+        <a className="btn btn--dark" href={LINKS.linkedin} target="_blank" rel="noopener noreferrer">
+          <LinkedInIcon />
+          LinkedIn
+        </a>
       </div>
-
-      <div className="block2">
-        <div className="aboutContainer">
-          <div className="info">
-            <h2>About Me</h2>
-            <p>{CONTENT.summary}</p>
-          </div>
-          <div></div>
-
-          <div className="contact">
-            <h2>Contact Details</h2>
-            <p className="address">
-              <span>Eridan Winckler</span>
-              <br />
-              <span>
-                {CONTENT.address}, {CONTENT.state}
-              </span>
-              <br />
-              <span>{CONTENT.email}</span>
-            </p>
-          </div>
-
-          <p>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-btn cta-btn--resume"
-              style={{ color: "#000" }}
-              href="https://drive.google.com/file/d/1j88L68SdmxFCfw7gL0LCt7gj7YNQPZqP/view?usp=sharing"
-            >
-              <i className="fa fa-download"></i> Download Resume
-            </a>{" "}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-btn cta-btn--resume"
-              style={{ color: "#000" }}
-              href="https://www.linkedin.com/in/eridan-winckler"
-            >
-              <i className="fa fa-linkedin"></i> LinkedIn
-            </a>
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default About;
